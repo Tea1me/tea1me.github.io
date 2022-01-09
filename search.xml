@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>NodeStatus搭建教程</title>
+      <link href="/2022/01/08/nodestatus-railway-ping-tai-da-jian-jiao-cheng/"/>
+      <url>/2022/01/08/nodestatus-railway-ping-tai-da-jian-jiao-cheng/</url>
+      
+        <content type="html"><![CDATA[<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>感谢<a href="https://github.com/cokemine">cokemine</a>大佬的<a href="https://github.com/cokemine/nodestatus">NodeStatus项目</a>以及<code>Railway</code>平台所提供的免费额度！</p><p>如果不介意的话注册<code>Railway</code>可以走我的<a href="https://railway.app/?referralCode=-wpkoJ">aff</a></p><p>使用<code>Railway</code>平台所搭建的NodeStatus稳定性不如本地搭建的，我的<code>tgbot</code>时常在<code>1min</code>之内发送同个服务器的上线和下线通知(</p><p>所以想长期使用我认为还是丢本地<code>vps</code>好，反正资源占用少(</p><p>因为懒+不想截图，所以本文以文字为主，只有少量图片，见谅(</p><p><strong><a href="https://node.xieshang.eu.org/">Demo</a></strong></p><h1 id="1-搭建准备"><a href="#1-搭建准备" class="headerlink" title="1.搭建准备"></a>1.搭建准备</h1><pre class="line-numbers language-none"><code class="language-none">Github账号一枚Railway账号一枚(建议直接用Github的号注册，方便些)MySQL/Sqlite数据库(数据库亦可以用Railway搭建的，只不过我是用的自己的)耐心！<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>现在就开始搭建吧！</p><h1 id="2-开始搭建"><a href="#2-开始搭建" class="headerlink" title="2.开始搭建"></a>2.开始搭建</h1><h2 id="1-Fork项目"><a href="#1-Fork项目" class="headerlink" title="1.Fork项目"></a>1.Fork项目</h2><p>首先需要将<a href="https://github.com/cokemine/nodestatus">NodeStatus项目</a><code>fork</code>到你的<code>Github</code>账号里。</p><h2 id="2-将项目部署至Railway"><a href="#2-将项目部署至Railway" class="headerlink" title="2.将项目部署至Railway"></a>2.将项目部署至Railway</h2><p>熟悉<code>Railway</code>操作的就直接导入就行了(</p><p>登录并绑定<code>Github</code>账号之后访问<a href="https://railway.app/dashboard">dashboard</a>页面.</p><p>点击右上方的 <code>+ New Project</code></p><p>选择<code>Deploy From Repo</code></p><p>选择你<code>Fork</code>的<code>NodeStatus</code>项目</p><p>点击<code>Deploy</code></p><p>稍等一会儿便部署完成了。</p><h2 id="3-添加环境变量"><a href="#3-添加环境变量" class="headerlink" title="3. 添加环境变量"></a>3. 添加环境变量</h2><p>在<code>Railway</code>中对应项目的<code>Variables</code>里面添加环境变量。  </p><p>环境变量详解见<a href="https://github.com/cokemine/nodestatus/blob/master/README.md">Readme</a></p><p><strong>需要注意的是好像<code>Railway</code>的监听端口每个人不一样，需要自己根据部署日志进行调整。</strong></p><h2 id="4-使用Railway自带的MySQL数据库"><a href="#4-使用Railway自带的MySQL数据库" class="headerlink" title="4. 使用Railway自带的MySQL数据库"></a>4. 使用Railway自带的MySQL数据库</h2><p>因为我本地是用的<code>SQLite</code>,为了方便备份我就选的<code>MySQL</code>而不是<code>MongoDB</code>,理论来说都可以的。</p><p>用<code>Railway</code>部署好<code>MySQL</code>之后进入<code>MySQL</code>界面</p><p>选择<code>Environment</code>目录下的<code>MySQL</code>选项  </p><p>选择<code>Connect</code>选项</p><p>复制<code>MySQL Connection URL</code>,最后的<code>railway</code>你可以改成自己想要的数据库名字，我直接用的nodestatus。</p><p>格式如：<code>mysql://root:ababa@XXXX.railway.app:XXXX/nodestatus</code></p><p>将链接粘贴进<code>NodeStatus</code>的环境变量<code>DATABASE</code>所对应的值中便可以开始使用了。</p><h2 id="5-添加监控服务器"><a href="#5-添加监控服务器" class="headerlink" title="5. 添加监控服务器"></a>5. 添加监控服务器</h2><p>访问<code>对应域名/admin</code>登录进入管理界面。</p><p>点击左边的<code>Management</code>。</p><p>点击<code>New</code>添加节点信息</p><p>之后需要的是<code>Username</code>和<code>Password</code>。</p><p>据作者所说如果之前是使用他的ServerStatus项目是可以直接导入节点的，我没试过(</p><p>至此Web端的操作便已结束。</p><h2 id="6-VPS添加监控"><a href="#6-VPS添加监控" class="headerlink" title="6. VPS添加监控"></a>6. VPS添加监控</h2><p>该过程以用户名为<code>a1</code>,密码为<code>p1</code>,域名为<code>ava.railway.app</code>举例</p><p><code>Client</code>端我使用的是<a href="https://github.com/cokemine/nodestatus-client-go">go</a>语言的版本。</p><p><code>SSH</code>进入需要监控的<code>VPS</code></p><p>运行命令</p><pre class="line-numbers language-none"><code class="language-none">wget https://raw.githubusercontent.com/cokemine/nodestatus-client-go/master/install.shbash install.sh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>当提示<code>请输入服务端的 DSN, 格式为 “ws(s)://username:password@yourdomain”"</code>时，按照格式输入：</p><pre class="line-numbers language-none"><code class="language-none">wss://a1:p1@ava.railway.app<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>然后等待30s左右即可。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+            <tag> nodestatus </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2020ICPC上海站</title>
+      <link href="/2022/01/08/2020icpc-shang-hai-zhan/"/>
+      <url>/2022/01/08/2020icpc-shang-hai-zhan/</url>
+      
+        <content type="html"><![CDATA[<p>菜鸡进队之后发现还是要写一波总结的，于是这个<code>blog</code>就重新拾起来了。</p><p>这次<strong>5题滚粗</strong>，不知道是Ag还是Cu（如果最开始不开A或许是有机会冲Au的）。上海站这场似乎有很多需要推公式的题，照理说是很适合我队（<del>实际上是适合我队巨佬</del>），但是因为各种锅而得到了一个不是很好的成绩，但收获满满（<del>指发现了很多锅</del>）</p><p>今天第一次参加<code>ICPC区域赛</code>，虽然是打星+线上，但还是有很多感想和收获，遂记录下来。<br>最大的收获便是<strong>不能死磕在一道题，要学会放下自己的尊严</strong>（指不要认为自己必须做出这道题）；其次是要学会<strong>读题</strong>（今天一道题读错了，坑了队友<strong>30 min+不知道多久的罚时</strong>，<code>dbq</code>。<del>主要还是自己英语太差了</del>）；<br>然后是<strong>推公式时一定要冷静、思路清晰</strong>，不然就容易出现本来一道题公式推对了但是自己认为是错的于是又花了一堆时间推回去这种情况（<del>别问我怎么知道的</del>）；对我们队这种水平来说，最开始要学会跟榜，先3人都开题<code>3 min</code>，再去跟榜上的签到题。然后复述一下今天比赛过程：</p><h3 id="初始阶段（持续3-h左右-炸裂阶段）："><a href="#初始阶段（持续3-h左右-炸裂阶段）：" class="headerlink" title="初始阶段（持续3 h左右 炸裂阶段）："></a>初始阶段（持续3 h左右 <del>炸裂阶段</del>）：</h3><p>首先我队大腿直接先开A,然后我和另外一个队友一边看榜一边开题，以中等的时间过掉了<em>签到题G</em>（<del>南京师范<code>6 s</code>过G tql</del>）；然后我俩疯狂开题，大佬死磕<em>A</em>,磕了<code>1 h</code>发现题看错了，在这之前我俩已经把题开了很多并且筛选出了可能可做的（<strong>事实证明还有很多道可做的被我们筛掉了</strong>），然而大佬似乎魔怔了继续磕<em>A</em>。又过了<code>30 min</code>，大佬又交了一发，还是WA，终于选择了放弃<em>A</em>转而进攻<em>B</em>，然后<em>B</em>也写炸了，<del>原因是我题意读错了</del>，这时候已经过去接近<code>2 h</code>，<strong>然而我队才A <em>1道签到题</em></strong>，此时发现排名已经掉到<code>300+</code>，我心理已经做好打铁的准备了。</p><h3 id="中间阶段（持续1-h左右-开始慢慢进入状态（3-h之后才进入状态有个鬼用））"><a href="#中间阶段（持续1-h左右-开始慢慢进入状态（3-h之后才进入状态有个鬼用））" class="headerlink" title="中间阶段（持续1 h左右 开始慢慢进入状态（3 h之后才进入状态有个鬼用））"></a>中间阶段（持续1 h左右 开始慢慢进入状态<del>（3 h之后才进入状态有个鬼用）</del>）</h3><p>又过了<code>10 min</code>左右，<em>B</em>终于过了，我队大腿转而进攻我觉得挺有可能的<em>D</em>，此时另外一个队友选择试试<em>M</em>，进攻了<code>30 min</code><strong>以未写完+思路不完整告终</strong>；大佬沉思了一会儿便开始写<em>D</em>,然而交了1发WA了，此时我队心态已经有些崩了；在又WA了一次之后，<em>D</em>终于过了，时间已经过去<code>3 h</code>，大佬心态稍微恢复了些（但我个人感觉还是有些崩），转而写<em>M</em>（本来我想我去写的，但大佬或许是急于证明自己的实力就拒绝了我，最后发现思路其实是差不多的，都是字符串建边）；本身<em>M</em>这种<strong>字符串</strong>的题我队3个懒人就不是很擅长。之后我队写<em>M</em>+<strong>调了几组奇怪的数据+Debug</strong>+中途写了一波<em>I</em>终于过掉了<em>M</em>。</p><h3 id="末尾阶段（持续1-h左右，我队大腿终于恢复了一点点（要是我够强还会是这吊样-jpg））"><a href="#末尾阶段（持续1-h左右，我队大腿终于恢复了一点点（要是我够强还会是这吊样-jpg））" class="headerlink" title="末尾阶段（持续1 h左右，我队大腿终于恢复了一点点（要是我够强还会是这吊样.jpg））"></a>末尾阶段（持续1 h左右，我队大腿终于恢复了一点点（<del>要是我够强还会是这吊样.jpg）</del>）</h3><p>此时已经过去<code>4 h+</code>，我队此时差不多是Cu末，于是我和另外一个队友准备把我俩之前推的<em>I</em>的情况和公式再试一遍，经历了各种情况（没特判、特判之后却有锅、取消特判转而求通解、通过造数据发现通解的锅。。。。。。）还是在<code>4.5 h</code>的时候没过掉<em>I</em>，大佬觉得我俩公式是错的然后他准备写他的，在他几乎写完却发现锅的时候，<strong>另外一个队友终于找到bug了(m=1的情况没特判)然后交上去A掉</strong>，大佬此时才发现他对题意的点理解有错误（他以为<code>(0,0)</code>的点也算），此时来到了<code>4 : 45</code>，也宣告了我们此时 <code>ICPC</code> 征程的结束。最后发现<strong>121名</strong>，刚好卡着我们自己的20%和教练给我们的目标：Cu前(好像5题是Ag?)。（<del>惨被奶炸</del>）<br>回望此次经历，大多都是问题，但这也是场好事，通过打星检测出我队的问题又不会浪费参赛名额（就是感觉我邮3个Au的正式队很nb，感觉我们很菜。鑫是真的强 Orz），并且让大佬意识到他的问题，是好事，确实收获满满。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> XCPC </tag>
+            
+            <tag> ICPC </tag>
+            
+            <tag> 2020 </tag>
+            
+            <tag> 信息学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>记录一些信息学的情话</title>
+      <link href="/2022/01/08/xin-xi-xue-de-qing-hua/"/>
+      <url>/2022/01/08/xin-xi-xue-de-qing-hua/</url>
+      
+        <content type="html"><![CDATA[<p><del>没有对象可以自己new一个</del></p><p><strong>HacKer</strong>技术学的再好, 却无法入侵你的<strong>心</strong>;服务器入侵的再多, 对你只有GUEST;是我的DDOS照成了你的拒绝服务, 还是我的byshell再次被你查杀？</p><p>你的<code>bug</code>，我来<code>de</code>。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 信息学 </tag>
+            
+            <tag> 情话 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>整型溢出读后感</title>
+      <link href="/2022/01/08/du-zheng-xing-yi-chu-you-gan/"/>
+      <url>/2022/01/08/du-zheng-xing-yi-chu-you-gan/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>⾼考改⾰⼀把刀，砍完竞赛砍自招。昔日清北堂前燕，飞入寻常211。<br>学科竞赛毕竟只是少数⼈的游戏，但受到的优惠是全体中国学生都能看懂的：保送/降分。⼈们发现这群「少数人」用他们不理解的事情，得到了他们梦寐以求的东西，于是第⼀时间想到的就是嫉妒。加上媒体⼀次又⼀次把竞赛送上舆论的风口浪尖，还添油加醋煽风点火，牺牲竞赛可能是历史的必然……⾛独木桥的恨那些划船的，认为他们⾛捷径靠⿊幕，便⾮要把他从船上拉上来。殊不知划船需要技术、买船需要资本，大部分人天赋也不够，投入也不够，便只想着怎么陷害别⼈了。</p></blockquote><p><strong>这将成为⾃招退场前的最后⼀个⾳符。即将展开的是⼀个崭新的，尚未确定的时代。</strong></p><blockquote><p>他们当中那些佼佼者的经历将如同⽆数前⼈的故事⼀样，成为后来者⼜中的传奇。</p></blockquote><p>读完了整型溢出这本书，有一些感想，便记录下来。</p><p><strong>“不公平”</strong>这是竞赛遭遇质疑的最重要的原因，外人大多是在没或者无法深入了解竞赛训练方式以及竞赛生刻苦程度的情况下便与大众一起大骂竞赛—但最终他们骂的而非竞赛本身，而是我们这些遭受非议最多、付出最多而无法为自己发声的竞赛生。我忘不了为了集训而与班主任争论一整个晚自习的经历，忘不了那种与同行者一同debug、出数据、互膜互吹的快乐，那种沉浸于知识本身、与他人愉快交流的感受，我至今也无法忘怀。但在进入大学后，某次与同树德中学光华校区的友人聚会时他们那句：那这种竞赛我觉得你们参加也没啥意义，真不如不参加。那种骨子里对竞赛的轻蔑–或者说是嫉妒我也忘不了。竞赛本身并非是一个功利的事情–就像奥数本身也并非功利的事情，但当竞赛与升学挂钩之后，大量的争议便会接踵而至。外人并不在意竞赛是否真正公平，他们只在意：他们能否获得<strong>更“公平”</strong>的公平。国人常有的<strong>“不患寡而患不均”</strong>的想法和很多媒体的推波助澜让竞赛这种<strong>在他们看来的“不正当手段获得的捷径”</strong>变成了众矢之的。竞赛本身是给有能力、有精力的高中生一条提高自己、拓宽视野的途径，这些选择竞赛的竞赛生并无任何错误，却承担了最多的骂名。竞赛生要顶着老师、家长、高考等各种重压，在竞赛这条路上艰难前行。他们本就已经够累了，举我最熟悉的信息竞赛来说，集训期间，从早上点到晚上9点都泡在机房，一整天的思考与晚上回家之后的debug的艰辛是不为外人所知的，然而这种程度的努力却被各大媒体与“公知”所忽视，他们只知道竞赛生在成功之后所获得的优待，却并不了解他们为了成功背后所付出的有多少。信息学竞赛或许是五大竞赛中发展最坎坷的，因为这门竞赛的学习对高中阶段所考试的科目是没有直接益处的，再加上<strong>€€£</strong>这个组织，Oier们一路披荆斩棘，通过独有的圈子交流+老人带新人的优良传统，oier们终未在这种大环境下屈服。我感触更深的便是成绩越好的人<strong>普遍</strong>更看不起竞赛，与其说是看不起不如说是他们成绩越好，越觉得那些获得和他们同等入学资格的竞赛生们不够格吧。我并非一位成绩优异的Oier，甚至可以说是一位成绩糟糕的oier，只考了一届NOIP，只有一个二等奖，成绩也算不上优秀，但正因如此我更为当下竞赛生所惋惜，我们那时的环境已经够糟糕了：老师反对，学校不同意（<del>还有自己划水</del>），但你们的环境更糟糕。或许对我这种菜鸡而言这种政策的影响不大，但我可以预见这对那些把2年心血全部倾注于OI的竞赛生的影响有多大，清北种子或许只能去普通本科</p><p>对竞赛本⾝⽽⾔，究竟是⼤规模普及，全民学习好；还是⼩规模精英化，仅仅提供给那些既充分学有余⼒又对此感兴趣的学⽣好？我个人更倾向于后者，前者的情况例如奥数。</p><blockquote><p>拿到这样的约，我们也许不再能专⼀地钻研，⽽是要⾛更为保险的双修道路。在这个要么保送要么降分的独⽊桥上，有多少⼈有能⼒去孤注⼀掷？</p><p>改⾰⾄少应该从新⼊学学⽣开始影响吧，就算等不了两年，⾄少放过16级，给这帮倒霉孩⼦⼀年的复习时间⾏不⾏？？？这20分配吗？配得上努⼒？配得上天赋？配得上理想？配得上热爱？</p></blockquote><blockquote><p>​                                                                        自主 招⽣ 自主 招⽣<br>​                                                                        五⼤学科竞赛倒闭了<br>​                                                                    中国 国家队 五⼤ 国家队<br>​                                                                            世界比赛打铁了<br>​                                                                    我们没有没有没有办法<br>​                                                                        只有学⽂化课课本<br>​                                                                    20分 20分 统统 统统<br>​                                                                            全场统统20分</p></blockquote><blockquote><p>最后，让我们好⽣谈谈<strong>竞赛选⼿</strong>这个群体。在近⼏年来的种种风波当中，他们⽆所争议地是受波及最⼤的⼀群⼈。<br>是谁被调剂到和竞赛学科毫⽆关联的专业？是选⼿。<br>是谁被弄丢代码，因为莫须有的原因被禁赛，由于同省考⽣的违规⾏为⽽错失省队名额？是选⼿。<br>是谁被不明就⾥的⽹友斥责为所谓“权贵”？是选⼿。<br>是谁整天为政策的变动所担⼼，唯恐⾃⼰的努⼒化为泡影？还是选⼿。<br>可他们同时也是最缺乏话语权的⼀批⼈，在跟⾃⼰的命运息息相关的这些事务中，这些选⼿却⼏乎不能产⽣任何影响。他们唯⼀能采取的有效⼿段就是更加拼命地埋下头去学习各种知识，⼒图使⾃⼰在下⼀场的竞争中拔得头筹，⽽之后等着他们的还有更多的竞争。<br>⽏庸置疑的是，这些选⼿对竞赛本⾝都怀有⼀以贯之的兴趣，有时甚⾄到了狂热的地步。但在承认他们对竞赛的热爱的同时，我们也不能不考虑另⼀个事实：在2015年之前的每⼀届⾼中⽣当中，热爱竞赛学科的⼈数不见得⽐他们的后辈更少。只是因为当时学习竞赛的风险更⼤，门槛更⾼，从⽽导致了不少⼈衡量利弊之后在⼀开始就放弃了踏上竞赛之路的可能性。这⼏年较为安稳的竞赛形势的确给了更多学⽣以接触竞赛知识的机会，但也让许多新队员在选择加⼊竞赛学习时部分忽略了竞赛原有的残酷性。必须认识到⼀个关键点，即<strong>竞赛并⾮⾼考的替代，⽽是对⾼中知识的补充</strong>。最有资格学习竞赛的学⽣⽆⾮两种：<strong>⼀是⾼考科⽬发挥极强，即使在竞赛学习上耽误过多时间也⼏乎不影响其⾼考成绩的；⼆是竞赛学科极为出⾊， 能够⼗拿九稳地进⼊国家集训队的。</strong>热爱和天赋在竞赛学习当中缺⼀不可，少了⼀个便是拿⾃⼰的前途做赌注。从这个⾓度来看，适当提⾼学科竞赛的准⼊资格对⼤部分⼈⽽⾔也并⾮坏事。⾄于“强基计划”会对2020届的信竞⽣造成多严重的影响<del>（我已经知道影响有多大了）</del>，在各⼤⾼校的招⽣简章正式发布之前还不能下定论。在此之前只有耐⼼等待。 对于⾼中⽣⽽⾔，信息学竞赛或许是⼀个崭新的世界，但他们迟早要进⼊⼤学这⽚更为⼴阔的天地。到了这⼀步，竞赛就不再是将他们从⽆趣的⾼考科⽬中解放出来的救星，却反过来在某种程度上对他们施加了更多的限制。“竞赛⽣”的⾝份既是光环，也是压⼒所在，它将竞赛⽣们的个⼈价值和竞赛本⾝绑定在了⼀起。他们曾经花在竞赛上的时间越多，取得的成就越⼤，因为⾃⼰的竞赛成绩受到越多⼈的赞许和崇拜，他们也就把⾃⼰的个⼈价值同学科竞赛绑得越紧。⽽竞赛延伸⽽出的深厚且⾃成⼀套的学习和竞争机制在⼤学⾥可以继续发挥价值标准的作⽤。要摆脱这样⼀套相当完备的评价体系，对部分竞赛⽣⽽⾔是件难事。其实，不论是竞赛⽣还是⾼考⽣都应该意识到⼀个问题，即⾼中时的价值评估体系实际上具有相当⼤的局限性。除此之外，还存在许许多多的可能性和各种各样的价值标准，将⾃⼰囿于⼀地的⾏为实际上相当不理智。竞赛经历固然值得怀念，但我们也要敢于向它挥⼿作别，去创造更多的⾃我价值；⽽在竞赛中培养，锻炼出来的各种能⼒和素质，才是真正应当带在⾝上的东西。这也是竞赛本⾝赋予它的学习者的最宝贵的财富。</p></blockquote><p>后来者啊，愿你们能把oi这团火传递下去，黑夜终将过去，白昼也会到来。</p><pre class="line-numbers language-none"><code class="language-none">现在的选⼿想要获得成就，天赋、努⼒和“运⽓”（包括稳定发挥、⼼态调整等⾮能⼒因素）缺⼀不可。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这是最好的时代，也是最坏的时代。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 信息学 </tag>
+            
+            <tag> 读后感 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2022/01/08/hello-world/"/>
+      <url>/2022/01/08/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
