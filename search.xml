@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>记录一次杠腾讯的过程</title>
+      <link href="/2022/01/11/ji-yi-ci-gang-teng-xun-de-guo-cheng/"/>
+      <url>/2022/01/11/ji-yi-ci-gang-teng-xun-de-guo-cheng/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>3年之前用<code>Google Voice</code>的号注册了个微信的小号，没有实名认证，21年上半年迁移到新加坡区去了。<br>换区之后我就没怎么管这个号了，因为这个号的好友只有我的大号以及一个早已不再联系的同学。<br>没想到1月初我尝试登录的时候提示号因为使用非官方客户端以及外挂被封禁，且无法解封。<br>这我肯定要杠腾讯的啊，快一年没有登录的号提示我使用非官方客户端？？并且我那个号里面还有<code>Wechat Out</code>绑定的<code>1.19 USD</code>话费，这必杠腾讯；<br>但我是知道南山必胜客的强大之处，于是在各大平台搜索之后才开杠，历时两周，故整理出此教程来记录我的过程，供后来者参考。</p><h1 id="流程总结"><a href="#流程总结" class="headerlink" title="流程总结"></a>流程总结</h1><p>因为南山必胜客脸皮过于厚，所以整体是需要向工信部投诉两次的。<br>第一次的腾讯的自动回复需要截图第二次用。<br>腾讯的吃相超级难看，一般投诉之后会拖到7天左右才会回复你，并且第一次只有自动回复的短信，第二次才有人工电话。<br><strong>那么我们现在就开杠吧！</strong></p><h1 id="第一次投诉"><a href="#第一次投诉" class="headerlink" title="第一次投诉"></a>第一次投诉</h1><p>进入<a href="https://ts.isc.org.cn/#/complaint/default">工信部互联网信息服务投诉平台</a><br>选择互联网企业<br>选择腾讯<br>之后按照要求填写信息，投诉内容就说自己什么也没干微信乱封号。<strong>记得账号一定要输入自己被封的微信号</strong><br>至此第一次投诉已经完成。<br>第一次投诉的作用仅在于为第二次投诉提供样本。<br><img src="/images/gangtx/1.png" alt="第一次投诉的结果"></p><h1 id="第二次投诉"><a href="#第二次投诉" class="headerlink" title="第二次投诉"></a>第二次投诉</h1><p>在第一次投诉提交之后7天之内应该会收到腾讯自动回复的短信，内容和你微信被封的原因一模一样。你把这条短信截图保存，同时对第一次投诉进行评价(骂腾讯差就对了)<br>第二次投诉流程和第一次差不多，只不过投诉内容换成敷衍处理，店大欺客，同时把上一次的投诉单号和回复截图附上，要求恢复账号。<br>这次也大概过7天作用会有腾讯客服联系你(我当时在考试就没接电话),收到恢复时候你再次登录原来那个被永久封号的账号会发现可以解封了。<br><img src="/images/gangtx/2.png" alt="第二次投诉的结果"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 腾讯 </tag>
+            
+            <tag> 微信 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>gdir搭建教程</title>
       <link href="/2022/01/11/gdir-da-jian-jiao-cheng/"/>
       <url>/2022/01/11/gdir-da-jian-jiao-cheng/</url>
