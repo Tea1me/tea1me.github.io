@@ -1,0 +1,2148 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="手上机器的回程线路记录, tea1me的博客">
+    <meta name="description" content="前情提要采用以下两个脚本：WorstTracebash &amp;lt;(curl -L -s https://raw.githubusercontent.com/07031218/normal-shell/main/WorstTrace.sh)W">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176833010-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-176833010-1');
+</script>
+
+
+    <title>手上机器的回程线路记录 | tea1me的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">tea1me的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">tea1me的博客</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">手上机器的回程线路记录</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%9D%82/">
+                                <span class="chip bg-color">杂</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%BA%BF%E8%B7%AF/">
+                                <span class="chip bg-color">线路</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-03-09
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-03-09
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    11.3k
+                </div>
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="前情提要"><a href="#前情提要" class="headerlink" title="前情提要"></a>前情提要</h1><p>采用以下两个脚本：<br><del>WorstTrace<br><code>bash &lt;(curl -L -s https://raw.githubusercontent.com/07031218/normal-shell/main/WorstTrace.sh)</code></del><br>WorstTrace<br><code>wget https://raw.githubusercontent.com//KANIKIG/worst_testrace/main/worst_testrace.sh bash worst_testrace.sh</code><br>BestTrace<br><code>bash &lt;(curl -L -s https://raw.githubusercontent.com/07031218/normal-shell/main/autoBestTrace.sh)</code></p>
+<h1 id="Dedipath-圣何塞-6-6刀-OVZ"><a href="#Dedipath-圣何塞-6-6刀-OVZ" class="headerlink" title="Dedipath 圣何塞 6.6刀 OVZ"></a>Dedipath 圣何塞 6.6刀 OVZ</h1><pre class="line-numbers language-none"><code class="language-none">武汉电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 202.103.44.150 &lt;
+ Hop  IP Address      Latency     ISP                Location                               
+ 1    74.217.183.195  0.051 ms    None               Santa Clara, California, United States 
+ 2    64.74.135.181   0.328 ms    None               Santa Clara, California, United States 
+ 3    66.151.144.67   1.369 ms    None               Santa Clara, California, United States 
+ 4    157.238.64.137  1.187 ms    None               NTT.COM BACKBONE                       
+ 5    129.250.9.74    4.499 ms    None               United States                          
+ 6    202.97.27.209   151.172 ms  AS4134 - 中国电信  中国                                   
+ *    *               *           *                  *                                      
+ 8    202.97.83.34    187.449 ms  AS4134 - 中国电信  兰州市, 甘肃省, 中国                   
+ *    *               *           *                  *                                      
+ 10   58.53.184.62    191.969 ms  AS4134 - 中国电信  武汉市, 湖北省, 中国                   
+ 11   58.53.184.54    242.32 ms   AS4134 - 中国电信  武汉市, 湖北省, 中国                   
+----------------------------------------------------------------------
+广州电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 14.215.116.1 &lt;
+ Hop  IP Address      Latency     ISP                Location                               
+ 1    74.217.183.195  0.069 ms    None               Santa Clara, California, United States 
+ 2    64.74.135.181   0.326 ms    None               Santa Clara, California, United States 
+ 3    66.151.144.1    1.291 ms    None               Santa Clara, California, United States 
+ 4    213.248.81.133  1.281 ms    None               Netherlands                            
+ 5    62.115.125.160  1.183 ms    None               Stockholm, Stockholm County, Sweden    
+ 6    218.30.54.181   3.016 ms    AS4134 - 中国电信  中国                                   
+ 7    202.97.43.117   157.733 ms  AS4134 - 中国电信  西安市, 陕西省, 中国                   
+ 8    202.97.12.2     153.17 ms   AS4134 - 中国电信  中国                                   
+ 9    202.97.82.21    159.224 ms  AS4134 - 中国电信  中国                                   
+ *    *               *           *                  *                                      
+ 11   183.2.167.229   165.005 ms  AS4134 - 中国电信  广州市, 广东省, 中国                   
+ 12   183.56.128.10   163.997 ms  AS4134 - 中国电信  广州市, 广东省, 中国                   
+ 13   14.215.116.1    167.272 ms  AS4134 - 中国电信  广州市, 广东省, 中国                   
+----------------------------------------------------------------------
+上海电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 101.95.120.109 &lt;
+ Hop  IP Address      Latency     ISP                Location                               
+ 1    74.217.183.195  0.054 ms    None               Santa Clara, California, United States 
+ 2    64.74.135.181   0.339 ms    None               Santa Clara, California, United States 
+ 3    66.151.144.1    1.368 ms    None               Santa Clara, California, United States 
+ 4    213.248.81.133  1.232 ms    None               Netherlands                            
+ 5    62.115.125.160  1.33 ms     None               Stockholm, Stockholm County, Sweden    
+ 6    218.30.54.181   1.603 ms    AS4134 - 中国电信  中国                                   
+ *    *               *           *                  *                                      
+ 8    202.97.12.189   144.413 ms  AS4134 - 中国电信  中国                                   
+ 9    202.97.24.177   167.239 ms  AS4134 - 中国电信  中国                                   
+----------------------------------------------------------------------
+厦门电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 117.28.254.129 &lt;
+ Hop  IP Address      Latency     ISP                      Location                               
+ 1    74.217.183.195  0.055 ms    None                     Santa Clara, California, United States 
+ 2    64.74.135.185   0.323 ms    None                     Santa Clara, California, United States 
+ 3    66.151.144.1    1.318 ms    None                     Santa Clara, California, United States 
+ 4    4.53.212.13     0.914 ms    None                     San Jose, California, United States    
+ *    *               *           *                        *                                      
+ 6    4.71.136.202    12.216 ms   AS3356 - Level 3 Parent  Los Angeles, California, United States 
+ 7    59.43.182.81    138.091 ms                           中国                                   
+ *    *               *           *                        *                                      
+ 9    59.43.138.49    140.817 ms                           中国                                   
+ 10   59.43.138.186   161.745 ms                           中国                                   
+ *    *               *           *                        *                                      
+ 13   117.25.141.110  180.167 ms  AS133775 - 中国电信      厦门市, 福建省, 中国                   
+ 14   117.28.254.129  167.23 ms   AS4809 - 中国电信        厦门市, 福建省, 中国                   
+----------------------------------------------------------------------
+重庆联通
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 113.207.25.138 &lt;
+ Hop  IP Address       Latency     ISP                Location                               
+ 1    74.217.183.195   0.055 ms    None               Santa Clara, California, United States 
+ 2    64.74.135.181    0.659 ms    None               Santa Clara, California, United States 
+ 3    66.151.144.67    2.191 ms    None               Santa Clara, California, United States 
+ 4    198.232.115.149  1.334 ms    None               San Jose, California, United States    
+ 5    50.115.91.111    10.18 ms    None               Los Angeles, California, United States 
+ 6    50.115.90.143    10.233 ms   None               United States                          
+ 7    206.223.123.80   12.67 ms    None               Los Angeles, California, United States 
+ 8    144.232.22.90    19.221 ms   None               United States                          
+ 9    144.232.22.70    16.964 ms   None               United States                          
+ 10   144.232.17.61    11.909 ms   None               United States                          
+ 11   144.223.54.226   59.393 ms   None               Los Angeles, California, United States 
+ 12   219.158.102.89   193.46 ms   AS4837 - 中国联通  广州市, 广东省, 中国                   
+ 13   219.158.98.93    199.465 ms  AS4837 - 中国联通  中国                                   
+ 14   219.158.24.125   219.338 ms  AS4837 - 中国联通  广州市, 广东省, 中国                   
+ 15   219.158.21.242   247.14 ms   AS4837 - 中国联通  中国                                   
+ 16   113.207.25.138   251.744 ms  AS4837 - 中国联通  中国                                   
+----------------------------------------------------------------------
+成都联通
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 119.6.6.6 &lt;
+ Hop  IP Address      Latency     ISP                Location                               
+ 1    74.217.183.195  0.078 ms    None               Santa Clara, California, United States 
+ 2    64.74.135.185   0.474 ms    None               Santa Clara, California, United States 
+ 3    66.151.144.65   1.674 ms    None               Santa Clara, California, United States 
+ 4    213.248.81.133  1.398 ms    None               Netherlands                            
+ 5    62.115.170.57   228.558 ms  None               Stockholm, Stockholm County, Sweden    
+ 6    219.158.96.41   289.248 ms  AS4837 - 中国联通  中国                                   
+ 7    219.158.3.141   272.206 ms  AS4837 - 中国联通  中国                                   
+ 8    219.158.4.173   317.714 ms  AS4837 - 中国联通  中国                                   
+ 9    219.158.97.174  335.597 ms  AS4837 - 中国联通  中国                                   
+ 10   119.6.197.14    342.957 ms  AS4837 - 中国联通  成都市, 四川省, 中国                   
+ 11   119.6.195.34    304.533 ms  AS4837 - 中国联通  成都市, 四川省, 中国                   
+ 12   119.6.6.6       221.311 ms  AS4837 - 中国联通  成都市, 四川省, 中国                   
+----------------------------------------------------------------------
+上海移动
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 120.204.197.126 &lt;
+ Hop  IP Address       Latency     ISP                   Location                               
+ 1    74.217.183.195   0.056 ms    None                  Santa Clara, California, United States 
+ 2    64.74.135.181    0.769 ms    None                  Santa Clara, California, United States 
+ 3    66.151.144.3     1.248 ms    None                  Santa Clara, California, United States 
+ 4    157.238.64.137   0.802 ms    None                  NTT.COM BACKBONE                       
+ 5    129.250.3.162    1.585 ms    AS2914 - NTT America  United States                          
+ 6    129.250.5.77     104.475 ms  AS2914 - NTT America  United States                          
+ 7    129.250.2.51     157.87 ms   AS2914 - NTT America  United States                          
+ 8    129.250.5.33     160.587 ms  AS2914 - NTT America  United States                          
+ *    *                *           *                     *                                      
+ 10   223.120.2.53     160.199 ms  AS58453 - CMI-INT-HK  China                                  
+ 11   223.120.2.14     164.439 ms  AS58453 - 中国移动    中国                                   
+ 12   223.120.22.5     184.175 ms  AS58453 - 中国移动    中国                                   
+ 13   221.183.55.34    194.309 ms  AS9808 - 中国移动     中国                                   
+ 14   221.183.25.193   184.808 ms  AS9808 - 中国移动     中国                                   
+ 15   221.176.22.13    203.697 ms  AS9808 - 中国移动     中国                                   
+ *    *                *           *                     *                                      
+ 18   117.185.10.234   197.671 ms  AS9808 - 中国移动     中国                                   
+ *    *                *           *                     *                                      
+ 20   120.204.197.126  195.495 ms  AS9808 - 中国移动     中国                                   
+----------------------------------------------------------------------
+成都移动
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 183.221.253.100 &lt;
+ Hop  IP Address       Latency     ISP                   Location                               
+ 1    74.217.183.195   0.057 ms    None                  Santa Clara, California, United States 
+ 2    64.74.135.181    0.378 ms    None                  Santa Clara, California, United States 
+ 3    66.151.144.67    2.349 ms    None                  Santa Clara, California, United States 
+ 4    157.238.64.137   1.792 ms    None                  NTT.COM BACKBONE                       
+ 5    129.250.3.162    1.881 ms    AS2914 - NTT America  United States                          
+ 6    129.250.5.77     104.468 ms  AS2914 - NTT America  United States                          
+ 7    129.250.2.51     158.773 ms  AS2914 - NTT America  United States                          
+ 8    129.250.5.33     157.54 ms   AS2914 - NTT America  United States                          
+ 9    203.131.241.86   161.561 ms  AS2914 - NTT America  Hong Kong SAR                          
+ 10   223.120.2.53     166.147 ms  AS58453 - CMI-INT-HK  China                                  
+ 11   223.120.2.6      172.982 ms  AS58453 - 中国移动    广州市, 广东省, 中国                   
+ 12   221.183.68.125   172.945 ms  AS9808 - 中国移动     中国                                   
+ 13   221.183.52.85    164.8 ms    AS9808 - 中国移动     中国                                   
+ 14   221.176.22.157   168.025 ms  AS9808 - 中国移动     广州市, 广东省, 中国                   
+ *    *                *           *                     *                                      
+ 16   111.24.2.145     213.261 ms  AS9808 - 中国移动     中国                                   
+ 17   111.24.2.246     219.505 ms  AS9808 - 中国移动     中国                                   
+ 18   221.176.21.202   227.002 ms  AS9808 - 中国移动     中国                                   
+ *    *                *           *                     *                                      
+ 20   183.221.253.100  239.866 ms  AS9808 - 中国移动     成都市, 四川省, 中国                   
+----------------------------------------------------------------------
+成都教育网
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 202.112.14.151 &lt;
+ Hop  IP Address      Latency     ISP                            Location                               
+ 1    74.217.183.195  0.062 ms    None                           Santa Clara, California, United States 
+ 2    64.74.135.185   1.091 ms    None                           Santa Clara, California, United States 
+ 3    66.151.144.2    1.371 ms    None                           Santa Clara, California, United States 
+ 4    157.130.195.89  0.853 ms    None                           San Jose, California, United States    
+ *    *               *           *                              *                                      
+ 7    154.54.1.193    1.807 ms    AS174 - Cogent Communications  United States                          
+ 8    154.54.31.189   13.593 ms   AS174 - Cogent Communications  United States                          
+ 9    154.54.42.102   13.769 ms   AS174 - Cogent Communications  United States                          
+ 10   38.88.196.186   17.598 ms   None                           Los Angeles, California, United States 
+ 11   101.4.117.169   175.556 ms  AS4538 - 中国教育网            中国                                   
+ *    *               *           *                              *                                      
+ 13   101.4.118.213   175.64 ms   AS4538 - 中国教育网            中国                                   
+ 14   101.4.112.14    189.935 ms  AS4538 - 中国教育网            西安市, 陕西省, 中国                   
+ 15   101.4.112.18    200.572 ms  AS4538 - 中国教育网            成都市, 四川省, 中国                   
+ *    *               *           *                              *                                      
+ 20   202.112.14.151  200.919 ms  AS24355 - 中国教育网           成都市, 四川省, 中国                   
+----------------------------------------------------------------------
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="斯巴达-2-5刀-三网4837"><a href="#斯巴达-2-5刀-三网4837" class="headerlink" title="斯巴达 2.5刀(三网4837)"></a>斯巴达 2.5刀(三网4837)</h1><pre class="line-numbers language-none"><code class="language-none">武汉电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 202.103.44.150 &lt;
+ Hop  IP Address       Latency     ISP                      Location                               
+ 1    10.0.0.73        165.801 ms  None                     LAN Address                            
+ 2    172.83.155.4     37.248 ms   None                     Seattle, Washington, United States     
+ 3    206.81.81.38     5.338 ms    None                     Seattle, Washington, United States     
+ *    *                *           *                        *                                      
+ 5    23.225.225.65    148.767 ms  AS40065 - CNSERVERS LLC  Los Angeles, California, United States 
+ 6    219.158.6.5      141.725 ms  AS4837 - 中国联通        中国                                   
+ 7    219.158.6.209    150.462 ms  AS4837 - 中国联通        中国                                   
+ 8    219.158.7.133    148.885 ms  AS4837 - 中国联通        长春市, 吉林省, 中国                   
+ 9    219.158.112.118  175.538 ms  AS4837 - 中国联通        兰州市, 甘肃省, 中国                   
+ 10   219.158.13.130   163.524 ms  AS4837 - 中国联通        武汉市, 湖北省, 中国                   
+ *    *                *           *                        *                                      
+ 12   202.97.65.77     159.307 ms                           中国                                   
+ 13   58.53.184.62     158.556 ms  AS4134 - 中国电信        武汉市, 湖北省, 中国                   
+ 14   58.53.184.54     160.367 ms  AS4134 - 中国电信        武汉市, 湖北省, 中国   
+----------------------------------------------------------------------
+广州电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 14.215.116.1 &lt;
+ Hop  IP Address       Latency     ISP                      Location                               
+ 1    10.0.0.73        7.496 ms    None                     LAN Address                            
+ 2    172.83.154.1     0.425 ms    None                     Seattle, Washington, United States     
+ 3    206.81.81.38     5.039 ms    None                     Seattle, Washington, United States     
+ *    *                *           *                        *                                      
+ 5    23.225.225.65    150.445 ms  AS40065 - CNSERVERS LLC  Los Angeles, California, United States 
+ 6    219.158.116.237  150.857 ms  AS4837 - 中国联通        中国                                   
+ 7    219.158.113.142  157.849 ms  AS4837 - 中国联通        中国                                   
+ 8    219.158.113.109  145.409 ms  AS4837 - 中国联通        中国                                   
+ *    *                *           *                        *                                      
+ 10   219.158.96.198   180.288 ms  AS4837 - 中国联通        广州市, 广东省, 中国                   
+ 11   202.97.17.161    171.613 ms  AS4134 - 中国电信        中国                                   
+ 12   202.97.80.21     180.209 ms  AS4134 - 中国电信        丽江市, 云南省, 中国                   
+ 13   113.96.4.50      175.393 ms  AS4134 - 中国电信        广州市, 广东省, 中国                   
+ 14   183.2.145.206    169.478 ms  AS4134 - 中国电信        广州市, 广东省, 中国                   
+ 15   183.56.129.10    170.149 ms  AS4134 - 中国电信        广州市, 广东省, 中国                   
+ 16   14.215.116.1     200.861 ms  AS4134 - 中国电信        广州市, 广东省, 中国         
+----------------------------------------------------------------------
+上海电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 101.95.120.109 &lt;
+ Hop  IP Address       Latency     ISP                         Location                               
+ 1    10.0.0.73        174.697 ms  None                        LAN Address                            
+ 2    172.83.155.4     36.132 ms   None                        Seattle, Washington, United States     
+ 3    206.81.81.38     5.121 ms    None                        Seattle, Washington, United States     
+ *    *                *           *                           *                                      
+ 5    23.225.225.65    148.133 ms  AS40065 - CNSERVERS LLC     Los Angeles, California, United States 
+ 6    219.158.6.5      142.081 ms  AS4837 - 中国联通           中国                                   
+ 7    219.158.113.126  150.177 ms  AS4837 - 中国联通           中国                                   
+ 8    219.158.113.105  148.498 ms  AS4837 - 中国联通           中国                                   
+ 9    219.158.112.226  144.394 ms  AS4837 - CHINA169-Backbone  Beijing, China                         
+ 10   202.97.16.29     146.527 ms  AS4134 - 中国电信           广州市, 广东省, 中国        
+----------------------------------------------------------------------
+厦门电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 117.28.254.129 &lt;
+ Hop  IP Address      Latency     ISP                   Location                           
+ 1    10.0.0.73       56.036 ms   None                  LAN Address                        
+ 2    172.83.154.5    0.373 ms    None                  Seattle, Washington, United States 
+ 3    104.225.97.189  4.972 ms    None                  Seattle, Washington, United States 
+ 4    129.250.203.81  5.983 ms    None                  United States                      
+ 5    129.250.5.85    5.989 ms    AS2914 - NTT America  United States                      
+ 6    129.250.4.143   106.059 ms  AS2914 - NTT America  United States                      
+ 7    129.250.6.131   107.939 ms  AS2914 - NTT America  United States                      
+ 8    129.250.2.69    94.717 ms   AS2914 - NTT America  United States                      
+ 9    120.88.54.134   113.37 ms   AS2914 - NTT America  Tokyo, Japan                       
+ 10   59.43.250.226   136.98 ms                         中国                               
+ *    *               *           *                     *                                  
+ 12   59.43.138.53    145.832 ms                        中国                               
+ 13   59.43.138.186   169.135 ms                        中国                               
+ *    *               *           *                     *                                  
+ 15   27.159.81.210   193.706 ms  AS133775 - 中国电信   厦门市, 福建省, 中国               
+ 16   117.25.141.110  146.757 ms  AS133775 - 中国电信   厦门市, 福建省, 中国               
+ 17   117.28.254.129  170.743 ms  AS4809 - 中国电信     厦门市, 福建省, 中国  
+----------------------------------------------------------------------
+重庆联通
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 113.207.25.138 &lt;
+ Hop  IP Address      Latency     ISP                      Location                               
+ 1    10.0.0.73       20.895 ms   None                     LAN Address                            
+ 2    172.83.154.1    6.902 ms    None                     Seattle, Washington, United States     
+ 3    206.81.81.38    5.189 ms    None                     Seattle, Washington, United States     
+ *    *               *           *                        *                                      
+ 5    23.225.225.65   146.222 ms  AS40065 - CNSERVERS LLC  Los Angeles, California, United States 
+ 6    219.158.98.173  196.928 ms  AS4837 - 中国联通        中国                                   
+ 7    219.158.8.189   191.55 ms   AS4837 - 中国联通        广州市, 广东省, 中国                   
+ 8    219.158.7.125   155.46 ms   AS4837 - 中国联通        青岛市, 山东省, 中国                   
+ 9    219.158.12.98   182.564 ms  AS4837 - 中国联通        中国                                   
+ 10   113.207.25.138  186.161 ms  AS4837 - 中国联通        中国                                   
+
+----------------------------------------------------------------------
+成都联通
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 119.6.6.6 &lt;
+ Hop  IP Address       Latency     ISP                      Location                               
+ 1    10.0.0.73        19.714 ms   None                     LAN Address                            
+ 2    172.83.155.6     1.772 ms    None                     Seattle, Washington, United States     
+ 3    206.81.81.38     5.225 ms    None                     Seattle, Washington, United States     
+ *    *                *           *                        *                                      
+ 5    23.225.225.65    146.687 ms  AS40065 - CNSERVERS LLC  Los Angeles, California, United States 
+ 6    219.158.116.233  180.301 ms  AS4837 - 中国联通        中国                                   
+ 7    219.158.113.118  175.12 ms   AS4837 - 中国联通        中国                                   
+ *    *                *           *                        *                                      
+ 9    219.158.107.90   221.086 ms  AS4837 - 中国联通        中国                                   
+ 10   119.6.197.14     220.796 ms  AS4837 - 中国联通        成都市, 四川省, 中国                   
+ 11   119.6.195.38     210.878 ms  AS4837 - 中国联通        成都市, 四川省, 中国                   
+ 12   119.6.6.6        210.55 ms   AS4837 - 中国联通        成都市, 四川省, 中国      
+----------------------------------------------------------------------
+上海移动
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 120.204.197.126 &lt;
+ Hop  IP Address       Latency     ISP                      Location                               
+ 1    10.0.0.73        17.553 ms   None                     LAN Address                            
+ 2    172.83.155.6     0.359 ms    None                     Seattle, Washington, United States     
+ 3    206.81.81.38     5.358 ms    None                     Seattle, Washington, United States     
+ *    *                *           *                        *                                      
+ 5    23.225.225.65    146.501 ms  AS40065 - CNSERVERS LLC  Los Angeles, California, United States 
+ 6    219.158.6.5      144.095 ms  AS4837 - 中国联通        中国                                   
+ 7    219.158.6.157    142.482 ms  AS4837 - 中国联通        中国                                   
+ 8    219.158.7.133    149.271 ms  AS4837 - 中国联通        长春市, 吉林省, 中国                   
+ 9    219.158.113.198  148.632 ms  AS4837 - 中国联通        中国                                   
+ *    *                *           *                        *                                      
+ 11   221.183.94.1     188.208 ms  AS9808 - 中国移动        中国                                   
+ *    *                *           *                        *                                      
+ 13   120.204.194.6    188.966 ms  AS9808 - 中国移动        中国                                   
+ 14   120.204.194.14   190.848 ms  AS9808 - 中国移动        中国                                   
+ 15   120.204.197.126  189.995 ms  AS9808 - 中国移动        中国                                   
+----------------------------------------------------------------------
+成都移动
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+&gt; Target: 183.221.253.100 &lt;
+ Hop  IP Address       Latency     ISP                      Location                               
+ 1    10.0.0.73        23.57 ms    None                     LAN Address                            
+ 2    172.83.155.4     22.971 ms   None                     Seattle, Washington, United States     
+ 3    206.81.81.38     5.6 ms      None                     Seattle, Washington, United States     
+ *    *                *           *                        *                                      
+ 5    23.225.225.65    144.055 ms  AS40065 - CNSERVERS LLC  Los Angeles, California, United States 
+ 6    219.158.116.233  183.174 ms  AS4837 - 中国联通        中国                                   
+ 7    219.158.113.118  173.528 ms  AS4837 - 中国联通        中国                                   
+ 8    219.158.113.109  172.887 ms  AS4837 - 中国联通        中国                                   
+ 9    219.158.104.126  217.981 ms  AS4837 - 中国联通        中国                                   
+ 10   219.158.110.34   225.477 ms  AS4837 - 中国联通        成都市, 四川省, 中国                   
+ 11   219.158.45.242   237.054 ms  AS4837 - 中国联通        中国                                   
+ 12   221.176.20.225   234.776 ms  AS9808 - 中国移动        成都市, 四川省, 中国                   
+ 13   111.24.2.157     242.73 ms   AS9808 - 中国移动        中国                                   
+ 14   111.24.2.246     254.901 ms  AS9808 - 中国移动        中国                                   
+ 15   221.176.21.202   242.379 ms  AS9808 - 中国移动        中国                                   
+ *    *                *           *                        *                                      
+ 17   183.221.253.100  246.027 ms  AS9808 - 中国移动        成都市, 四川省, 中国    
+----------------------------------------------------------------------
+成都教育网
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 202.112.14.151 &lt;
+ Hop  IP Address       Latency     ISP                              Location                               
+ 1    10.0.0.73        34.995 ms   None                             LAN Address                            
+ 2    172.83.154.1     0.453 ms    None                             Seattle, Washington, United States     
+ *    *                *           *                                *                                      
+ 4    184.104.197.46   5.383 ms    AS6939 - Hurricane Electric LLC  United States                          
+ 5    184.105.64.138   9.742 ms    AS6939 - Hurricane Electric LLC  United States                          
+ 6    184.104.193.141  29.811 ms   AS6939 - Hurricane Electric LLC  United States                          
+ 7    216.218.244.106  215.746 ms  AS6939 - Hurricane Electric LLC  Los Angeles, California, United States 
+ 8    101.4.117.185    212.663 ms  AS4538 - 中国教育网              中国                                   
+ 9    101.4.117.213    219.498 ms  AS4538 - 中国教育网              中国                                   
+ *    *                *           *                                *                                      
+ 11   101.4.118.213    210.199 ms  AS4538 - 中国教育网              中国                                   
+ *    *                *           *                                *                                      
+ 13   101.4.112.18     242.394 ms  AS4538 - 中国教育网              成都市, 四川省, 中国                   
+ *    *                *           *                                *                                      
+ 18   202.112.14.151   239.007 ms  AS24355 - 中国教育网             成都市, 四川省, 中国                   
+
+-----------------------------------------------------------------<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="webhorizon-6-6刀"><a href="#webhorizon-6-6刀" class="headerlink" title="webhorizon 6.6刀"></a>webhorizon 6.6刀</h1><pre class="line-numbers language-none"><code class="language-none">武汉电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 202.103.44.150 &lt;
+ Hop  IP Address       Latency     ISP                                         Location                               
+ 1    103.179.45.4     0.066 ms    None                                        Tokyo, Japan                           
+ 2    180.149.230.201  0.277 ms    None                                        Tokyo, Japan                           
+ 3    180.149.230.255  0.69 ms     None                                        Tokyo, Japan                           
+ 4    138.199.1.194    0.283 ms    AS60068 - CDN77                             United Kingdom                         
+ 5    185.156.45.17    103.101 ms  None                                        CDN77.COM BACKBONE                     
+ *    *                *           *                                           *                                      
+ 7    64.86.252.12     98.623 ms   AS6453 - TATA COMMUNICATIONS (AMERICA) INC  Los Angeles, California, United States 
+ *    *                *           *                                           *                                      
+ 9    202.97.71.193    129.795 ms                                              南京市, 江苏省, 中国                   
+ 10   202.97.12.181    132.401 ms  AS4134 - 中国电信                           中国                                   
+ *    *                *           *                                           *                                      
+ 12   202.97.19.58     158.475 ms  AS4134 - 中国电信                           中国                                   
+ 13   58.53.184.78     261.413 ms  AS4134 - 中国电信                           武汉市, 湖北省, 中国                   
+----------------------------------------------------------------------
+广州电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 14.215.116.1 &lt;
+ Hop  IP Address       Latency     ISP                Location             
+ 1    103.179.45.4     0.098 ms    None               Tokyo, Japan         
+ 2    180.149.230.201  0.302 ms    None               Tokyo, Japan         
+ 3    180.149.230.255  0.557 ms    None               Tokyo, Japan         
+ 4    138.199.1.194    0.246 ms    AS60068 - CDN77    United Kingdom       
+ 5    185.156.45.18    103.112 ms  None               CDN77.COM BACKBONE   
+ *    *                *           *                  *                    
+ 10   202.97.82.57     159.041 ms  AS4134 - 中国电信  中国                 
+ *    *                *           *                  *                    
+ 13   121.14.50.218    161.463 ms  AS4134 - 中国电信  广州市, 广东省, 中国 
+ 14   183.56.129.10    157.629 ms  AS4134 - 中国电信  广州市, 广东省, 中国 
+ 15   14.215.116.1     160.154 ms  AS4134 - 中国电信  广州市, 广东省, 中国 
+----------------------------------------------------------------------
+上海电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 101.95.120.109 &lt;
+ Hop  IP Address       Latency    ISP                   Location       
+ 1    103.179.45.4     0.108 ms   None                  Tokyo, Japan   
+ 2    180.149.230.201  0.297 ms   None                  Tokyo, Japan   
+ 3    180.149.230.255  0.517 ms   None                  Tokyo, Japan   
+ 4    138.199.1.194    0.337 ms   AS60068 - CDN77       United Kingdom 
+ 5    61.200.82.185    10.535 ms  AS2914 - NTT America  Tokyo, Japan   
+ 6    129.250.7.63     1.75 ms    AS2914 - NTT America  United States  
+ *    *                *          *                     *              
+ 11   61.152.26.37     65.976 ms  AS4812 - 中国电信     中国           
+----------------------------------------------------------------------
+厦门电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 117.28.254.129 &lt;
+Hop  IP Address       Latency    ISP                   Location             
+ 1    103.179.45.4     0.079 ms   None                  Tokyo, Japan         
+ 2    180.149.230.201  0.28 ms    None                  Tokyo, Japan         
+ 3    180.149.230.255  0.633 ms   None                  Tokyo, Japan         
+ 4    138.199.1.194    0.31 ms    AS60068 - CDN77       United Kingdom       
+ 5    61.200.82.185    1.891 ms   AS2914 - NTT America  Tokyo, Japan         
+ *    *                *          *                     *                    
+ 7    59.43.183.53     56.956 ms                        中国                 
+ *    *                *          *                     *                    
+ 10   59.43.138.186    60.235 ms                        中国                 
+ *    *                *          *                     *                    
+ 12   27.148.195.90    57.873 ms  AS133775 - 中国电信   厦门市, 福建省, 中国 
+ 13   117.25.141.106   51.608 ms  AS133775 - 中国电信   厦门市, 福建省, 中国 
+ 14   117.28.254.129   65.484 ms  AS4809 - 中国电信     厦门市, 福建省, 中国 
+----------------------------------------------------------------------
+重庆联通
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 113.207.25.138 &lt;
+ Hop  IP Address       Latency     ISP                   Location       
+ 1    103.179.45.4     0.093 ms    None                  Tokyo, Japan   
+ 2    180.149.230.201  0.266 ms    None                  Tokyo, Japan   
+ 3    180.149.230.255  0.479 ms    None                  Tokyo, Japan   
+ 4    138.199.1.194    0.322 ms    AS60068 - CDN77       United Kingdom 
+ 5    61.200.82.185    9.196 ms    AS2914 - NTT America  Tokyo, Japan   
+ 6    129.250.7.63     2.136 ms    AS2914 - NTT America  United States  
+ *    *                *           *                     *              
+ 10   219.158.5.157    81.46 ms    AS4837 - 中国联通     中国           
+ *    *                *           *                     *              
+ 12   113.207.25.138   106.708 ms  AS4837 - 中国联通     中国           
+----------------------------------------------------------------------
+成都联通
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 119.6.6.6 &lt;
+ Hop  IP Address       Latency     ISP                   Location             
+ 1    103.179.45.4     0.081 ms    None                  Tokyo, Japan         
+ 2    180.149.230.201  0.24 ms     None                  Tokyo, Japan         
+ 3    180.149.230.255  0.674 ms    None                  Tokyo, Japan         
+ 4    138.199.1.194    0.333 ms    AS60068 - CDN77       United Kingdom       
+ 5    61.200.82.185    0.674 ms    AS2914 - NTT America  Tokyo, Japan         
+ 6    129.250.7.63     2.566 ms    AS2914 - NTT America  United States        
+ *    *                *           *                     *                    
+ 10   219.158.18.65    86.089 ms   AS4837 - 中国联通     中国                 
+ 11   219.158.97.174   102.65 ms   AS4837 - 中国联通     中国                 
+ 12   119.6.197.198    97.095 ms   AS4837 - 中国联通     成都市, 四川省, 中国 
+ 13   119.6.195.34     106.311 ms  AS4837 - 中国联通     成都市, 四川省, 中国 
+ 14   119.6.6.6        109.688 ms  AS4837 - 中国联通     成都市, 四川省, 中国 
+----------------------------------------------------------------------
+上海移动
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 120.204.197.126 &lt;
+ Hop  IP Address       Latency    ISP                   Location       
+ 1    103.179.45.4     0.074 ms   None                  Tokyo, Japan   
+ 2    180.149.230.201  0.255 ms   None                  Tokyo, Japan   
+ 3    180.149.230.255  0.477 ms   None                  Tokyo, Japan   
+ 4    138.199.1.194    0.311 ms   AS60068 - CDN77       United Kingdom 
+ 5    61.200.82.185    0.53 ms    AS2914 - NTT America  Tokyo, Japan   
+ 6    129.250.7.55     0.695 ms   AS2914 - NTT America  United States  
+ 7    129.250.2.51     54.674 ms  AS2914 - NTT America  United States  
+ 8    129.250.5.33     57.466 ms  AS2914 - NTT America  United States  
+ *    *                *          *                     *              
+ 11   223.120.2.14     59.618 ms  AS58453 - 中国移动    中国           
+ *    *                *          *                     *              
+ 15   221.176.22.9     61.684 ms  AS9808 - 中国移动     中国           
+ *    *                *          *                     *              
+ 18   117.185.10.122   63.488 ms  AS9808 - 中国移动     中国           
+ 19   120.204.194.6    85.741 ms  AS9808 - 中国移动     中国           
+ 20   120.204.194.14   66.967 ms  AS9808 - 中国移动     中国           
+ *    *                *          *                     *              
+ 25   120.204.197.126  85.126 ms  AS9808 - 中国移动     中国           
+----------------------------------------------------------------------
+成都移动
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 183.221.253.100 &lt;
+ Hop  IP Address       Latency    ISP                   Location       
+ 1    103.179.45.4     0.058 ms   None                  Tokyo, Japan   
+ 2    180.149.230.201  0.256 ms   None                  Tokyo, Japan   
+ 3    180.149.230.255  0.463 ms   None                  Tokyo, Japan   
+ 4    138.199.1.194    0.282 ms   AS60068 - CDN77       United Kingdom 
+ 5    61.200.82.185    1.323 ms   AS2914 - NTT America  Tokyo, Japan   
+ 6    129.250.7.55     0.682 ms   AS2914 - NTT America  United States  
+ 7    129.250.2.51     54.03 ms   AS2914 - NTT America  United States  
+ 8    129.250.5.33     53.939 ms  AS2914 - NTT America  United States  
+ *    *                *          *                     *              
+ 10   223.120.2.53     52.629 ms  None                  Hong Kong SAR  
+----------------------------------------------------------------------
+成都教育网
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 202.112.14.151 &lt;
+ Hop  IP Address       Latency     ISP                   Location             
+ 1    103.179.45.4     0.117 ms    None                  Tokyo, Japan         
+ 2    180.149.230.201  0.279 ms    None                  Tokyo, Japan         
+ 3    180.149.230.255  0.486 ms    None                  Tokyo, Japan         
+ 4    138.199.1.194    0.309 ms    AS60068 - CDN77       United Kingdom       
+ 5    61.200.82.185    4.126 ms    AS2914 - NTT America  Tokyo, Japan         
+ 6    129.250.7.55     2.182 ms    AS2914 - NTT America  United States        
+ 7    129.250.2.51     51.981 ms   AS2914 - NTT America  United States        
+ *    *                *           *                     *                    
+ 10   223.120.2.117    52.303 ms   None                  Hong Kong SAR        
+ 11   223.120.3.86     54.188 ms   AS58453 - 中国移动    中国                 
+ 12   223.119.81.94    54.135 ms   AS58453 - CMI-INT-HK  Hong Kong SAR        
+ 13   101.4.114.181    88.485 ms   AS4538 - 中国教育网   中国                 
+ *    *                *           *                     *                    
+ 15   101.4.118.213    87.489 ms   AS4538 - 中国教育网   中国                 
+ 16   101.4.112.14     105.163 ms  AS4538 - 中国教育网   西安市, 陕西省, 中国 
+ 17   101.4.112.18     115.443 ms  AS4538 - 中国教育网   成都市, 四川省, 中国 
+ 18   101.4.116.158    114.509 ms  AS4538 - 中国教育网   成都市, 四川省, 中国 
+ *    *                *           *                     *                    
+ 23   202.112.14.151   113.156 ms  AS24355 - 中国教育网  成都市, 四川省, 中国 
+----------------------------------------------------------------------<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="OLINK-4刀-三网9929"><a href="#OLINK-4刀-三网9929" class="headerlink" title="OLINK 4刀(三网9929)"></a>OLINK 4刀(三网9929)</h1><pre class="line-numbers language-none"><code class="language-none">武汉电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 202.103.44.150 &lt;
+ Hop  IP Address      Latency     ISP                      Location               
+ 1    10.0.0.2        13.706 ms   None                     LAN Address            
+ 2    43.252.84.105   15.809 ms   AS10099 - UNICOM-Global  Hong Kong SAR          
+ 3    162.255.48.229  140.049 ms  AS10099 - UNICOM-Global  London, United Kingdom 
+ 4    210.78.28.145   142.045 ms                           中国                   
+ 5    210.78.30.158   143.019 ms                           中国                   
+ 6    202.97.81.65    144.73 ms   AS4134 - 中国电信        中国                   
+ *    *               *           *                        *                      
+ 8    202.97.37.166   160.791 ms  AS4134 - 中国电信        武汉市, 湖北省, 中国   
+ 9    58.53.184.70    162.481 ms  AS4134 - 中国电信        武汉市, 湖北省, 中国   
+----------------------------------------------------------------------
+广州电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 14.215.116.1 &lt;
+ Hop  IP Address       Latency     ISP                      Location               
+ 1    10.0.0.2         13.7 ms     None                     LAN Address            
+ 2    43.252.84.105    15.968 ms   AS10099 - UNICOM-Global  Hong Kong SAR          
+ 3    162.255.48.229   140.461 ms  AS10099 - UNICOM-Global  London, United Kingdom 
+ 4    210.78.28.149    142.555 ms                           中国                   
+ 5    218.105.131.122  177.627 ms  AS9929 - 中国联通        中国                   
+ 6    210.14.161.150   173.789 ms                           无锡市, 江苏省, 中国   
+ 7    202.97.16.69     177.914 ms  AS4134 - 中国电信        广州市, 广东省, 中国   
+ 8    202.97.95.105    175.555 ms  AS4134 - 中国电信        中国                   
+ 9    113.96.5.58      178.14 ms   AS4134 - 中国电信        广州市, 广东省, 中国   
+ 10   113.96.4.230     181.854 ms  AS4134 - 中国电信        广州市, 广东省, 中国   
+ *    *                *           *                        *                      
+ 12   183.56.129.2     176.087 ms  AS4134 - 中国电信        广州市, 广东省, 中国   
+ 13   14.215.116.1     178.951 ms  AS4134 - 中国电信        广州市, 广东省, 中国   
+----------------------------------------------------------------------
+上海电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 101.95.120.109 &lt;
+ Hop  IP Address       Latency     ISP                      Location               
+ 1    10.0.0.2         13.718 ms   None                     LAN Address            
+ 2    43.252.84.105    15.662 ms   AS10099 - UNICOM-Global  Hong Kong SAR          
+ 3    162.255.48.229   142.836 ms  AS10099 - UNICOM-Global  London, United Kingdom 
+ 4    210.78.28.145    142.093 ms                           中国                   
+ 5    218.105.131.102  161.529 ms  AS9929 - 中国联通        中国                   
+ 6    218.105.2.150    179.602 ms  AS9929 - 中国联通        中国                   
+ 7    202.97.16.65     165.828 ms  AS4134 - 中国电信        中国                   
+----------------------------------------------------------------------
+厦门电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 117.28.254.129 &lt;
+ Hop  IP Address       Latency     ISP                      Location               
+ 1    10.0.0.2         13.732 ms   None                     LAN Address            
+ 2    43.252.84.105    17.705 ms   AS10099 - UNICOM-Global  Hong Kong SAR          
+ 3    162.255.48.229   141.083 ms  AS10099 - UNICOM-Global  London, United Kingdom 
+ 4    210.78.28.145    142.058 ms                           中国                   
+ 5    210.78.30.142    143.021 ms                           中国                   
+ 6    219.158.39.65    144.363 ms  AS4837 - 中国联通        中国                   
+ 7    219.158.5.117    143.808 ms  AS4837 - 中国联通        中国                   
+ 8    219.158.109.186  147.779 ms  AS4837 - 中国联通        兰州市, 甘肃省, 中国   
+ 9    219.158.38.250   160.393 ms  AS4837 - 中国联通        中国                   
+ 10   59.43.137.222    189.264 ms                           中国                   
+ 11   59.43.156.193    184.379 ms                           中国                   
+ 12   59.43.46.214     198.063 ms                           中国                   
+ *    *                *           *                        *                      
+ 15   117.25.141.110   189.531 ms  AS133775 - 中国电信      厦门市, 福建省, 中国   
+ 16   117.28.254.129   204.624 ms  AS4809 - 中国电信        厦门市, 福建省, 中国   
+----------------------------------------------------------------------
+重庆联通
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 113.207.25.138 &lt;
+ Hop  IP Address       Latency     ISP                      Location               
+ 1    10.0.0.2         13.735 ms   None                     LAN Address            
+ 2    43.252.84.105    15.836 ms   AS10099 - UNICOM-Global  Hong Kong SAR          
+ 3    162.255.48.229   140.406 ms  AS10099 - UNICOM-Global  London, United Kingdom 
+ 4    210.78.28.145    142.094 ms                           中国                   
+ *    *                *           *                        *                      
+ 7    210.14.178.82    170.775 ms                           中国                   
+ 8    219.158.45.105   174.434 ms  AS4837 - 中国联通        中国                   
+ 9    219.158.106.201  174.818 ms  AS4837 - 中国联通        中国                   
+ 10   113.207.25.138   171.621 ms  AS4837 - 中国联通        中国              ----------------------------------------------------------------------
+成都联通
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 119.6.6.6 &lt;
+ Hop  IP Address      Latency     ISP                      Location               
+ 1    10.0.0.2        13.713 ms   None                     LAN Address            
+ 2    43.252.84.105   17.076 ms   AS10099 - UNICOM-Global  Hong Kong SAR          
+ 3    162.255.48.229  142.942 ms  AS10099 - UNICOM-Global  London, United Kingdom 
+ 4    210.78.28.157   142.516 ms                           中国                   
+ *    *               *           *                        *                      
+ 6    210.78.19.74    175.304 ms                           成都市, 四川省, 中国   
+ 7    219.158.45.97   181.844 ms  AS4837 - 中国联通        中国                   
+ 8    219.158.109.13  180.436 ms  AS4837 - 中国联通        成都市, 四川省, 中国   
+ 9    119.6.197.254   178.534 ms  AS4837 - 中国联通        成都市, 四川省, 中国   
+ 10   119.6.195.34    176.429 ms  AS4837 - 中国联通        成都市, 四川省, 中国   
+ 11   119.6.6.6       175.925 ms  AS4837 - 中国联通        成都市, 四川省, 中国   
+----------------------------------------------------------------------
+上海移动
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 120.204.197.126 &lt;
+ Hop  IP Address       Latency     ISP                      Location               
+ 1    10.0.0.2         13.747 ms   None                     LAN Address            
+ 2    43.252.84.105    14.923 ms   AS10099 - UNICOM-Global  Hong Kong SAR          
+ 3    162.255.48.229   143.677 ms  AS10099 - UNICOM-Global  London, United Kingdom 
+ 4    210.78.28.157    142.722 ms                           中国                   
+ 5    218.105.131.126  163.691 ms  AS9929 - 中国联通        中国                   
+ 6    218.105.2.174    164.33 ms   AS9929 - 中国联通        中国                   
+ 7    219.158.113.149  166.288 ms  AS4837 - 中国联通        中国                   
+ 8    221.183.95.213   198.12 ms   AS9808 - 中国移动        中国                   
+ 9    221.183.90.253   209.679 ms  AS9808 - 中国移动        中国                   
+ *    *                *           *                        *                      
+ 11   120.204.194.14   202.899 ms  AS9808 - 中国移动        中国                   
+ 12   120.204.197.126  200.736 ms  AS9808 - 中国移动        中国      ----------------------------------------------------------------------
+成都移动
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 183.221.253.100 &lt;
+ Hop  IP Address       Latency     ISP                      Location               
+ 1    10.0.0.2         13.721 ms   None                     LAN Address            
+ 2    43.252.84.105    18.019 ms   AS10099 - UNICOM-Global  Hong Kong SAR          
+ 3    162.255.48.229   139.931 ms  AS10099 - UNICOM-Global  London, United Kingdom 
+ 4    210.78.28.157    142.809 ms                           中国                   
+ 5    210.78.30.146    142.885 ms                           中国                   
+ 6    219.158.39.65    145.797 ms  AS4837 - 中国联通        中国                   
+ 7    219.158.5.117    143.942 ms  AS4837 - 中国联通        中国                   
+ 8    219.158.110.202  174.855 ms  AS4837 - 中国联通        中国                   
+ 9    219.158.110.34   179.071 ms  AS4837 - 中国联通        成都市, 四川省, 中国   
+ 10   219.158.45.226   177.79 ms   AS4837 - 中国联通        中国                   
+ 11   221.176.20.225   174.441 ms  AS9808 - 中国移动        成都市, 四川省, 中国   
+ 12   221.183.119.101  178.671 ms  AS9808 - 中国移动        中国                   
+ 13   111.24.17.161    179.748 ms  AS9808 - 中国移动        中国                   
+ 14   221.176.21.202   200.518 ms  AS9808 - 中国移动        中国                   
+ *    *                *           *                        *                      
+ 16   183.221.253.100  178.069 ms  AS9808 - 中国移动        成都市, 四川省, 中国   
+----------------------------------------------------------------------
+成都教育网
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 202.112.14.151 &lt;
+ Hop  IP Address      Latency     ISP                      Location               
+ 1    10.0.0.2        13.692 ms   None                     LAN Address            
+ 2    43.252.84.105   16.379 ms   AS10099 - UNICOM-Global  Hong Kong SAR          
+ 3    162.255.48.229  141.545 ms  AS10099 - UNICOM-Global  London, United Kingdom 
+ 4    210.78.28.149   141.999 ms                           中国                   
+ 5    210.78.30.142   142.731 ms                           中国                   
+ 6    219.158.39.65   143.906 ms  AS4837 - 中国联通        中国                   
+ 7    219.158.5.117   143.812 ms  AS4837 - 中国联通        中国                   
+ 8    219.158.3.66    145.171 ms  AS4837 - 中国联通        中国                   
+ 9    219.158.39.54   167.289 ms  AS4837 - 中国联通        中国                   
+ 10   101.4.116.65    152.846 ms  AS4538 - 中国教育网      中国                   
+ *    *               *           *                        *                      
+ 15   202.112.14.151  171.474 ms  AS24355 - 中国教育网     成都市, 四川省, 中国   
+----------------------------------------------------------------------<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="Oracle-Tokyo-AMD"><a href="#Oracle-Tokyo-AMD" class="headerlink" title="Oracle Tokyo AMD"></a>Oracle Tokyo AMD</h1><pre class="line-numbers language-none"><code class="language-none">武汉电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 202.103.44.150 &lt;
+ Hop  IP Address     Latency    ISP                           Location             
+ 1    140.91.206.5   0.201 ms   AS31898 - Oracle Corporation  Tokyo, Japan         
+ 2    61.200.80.62   5.612 ms   AS2914 - NTT America          Tokyo, Japan         
+ 3    61.200.80.61   1.052 ms   AS2914 - NTT America          Tokyo, Japan         
+ 4    129.250.6.45   1.272 ms   AS2914 - NTT America          United States        
+ 5    129.250.3.22   1.584 ms   AS2914 - NTT America          United States        
+ 6    129.250.66.54  84.261 ms  AS2914 - NTT America          United States        
+ 7    202.97.12.57   84.822 ms  AS4134 - 中国电信             中国                 
+ 8    202.97.34.157  91.359 ms  AS4134 - 中国电信             中国                 
+ 9    202.97.65.254  92.71 ms                                 南昌市, 江西省, 中国 
+ 10   58.53.184.58   95.507 ms  AS4134 - 中国电信             武汉市, 湖北省, 中国 
+ 11   58.53.184.54   95.989 ms  AS4134 - 中国电信             武汉市, 湖北省, 中国 
+----------------------------------------------------------------------
+广州电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 14.215.116.1 &lt;
+ Hop  IP Address       Latency     ISP                           Location             
+ 1    140.91.206.52    0.18 ms     AS31898 - Oracle Corporation  Tokyo, Japan         
+ 2    61.200.80.62     48.99 ms    AS2914 - NTT America          Tokyo, Japan         
+ 3    61.200.80.61     1.288 ms    AS2914 - NTT America          Tokyo, Japan         
+ 4    129.250.6.47     2.56 ms     AS2914 - NTT America          United States        
+ 5    129.250.3.28     1.861 ms    AS2914 - NTT America          United States        
+ 6    202.97.94.13     91.515 ms   AS4134 - 中国电信             广州市, 广东省, 中国 
+ 7    202.97.12.30     89.347 ms   AS4134 - 中国电信             中国                 
+ 8    202.97.94.141    91.375 ms   AS4134 - 中国电信             广州市, 广东省, 中国 
+ 9    113.96.4.54      94.959 ms   AS4134 - 中国电信             广州市, 广东省, 中国 
+ 10   113.108.209.110  92.865 ms   AS4134 - 中国电信             广州市, 广东省, 中国 
+ 11   183.56.129.10    107.365 ms  AS4134 - 中国电信             广州市, 广东省, 中国 
+ 12   14.215.116.1     91.959 ms   AS4134 - 中国电信             广州市, 广东省, 中国 
+----------------------------------------------------------------------
+上海电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 101.95.120.109 &lt;
+ Hop  IP Address     Latency    ISP                           Location      
+ 1    140.91.206.3   0.191 ms   AS31898 - Oracle Corporation  Tokyo, Japan  
+ 2    61.200.80.62   0.958 ms   AS2914 - NTT America          Tokyo, Japan  
+ 3    61.200.80.61   1.385 ms   AS2914 - NTT America          Tokyo, Japan  
+ 4    129.250.6.45   3.237 ms   AS2914 - NTT America          United States 
+ 5    129.250.3.22   1.512 ms   AS2914 - NTT America          United States 
+ 6    129.250.66.62  63.806 ms  AS2914 - NTT America          United States 
+----------------------------------------------------------------------
+厦门电信
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 117.28.254.129 &lt;
+ Hop  IP Address      Latency     ISP                           Location             
+ 1    140.91.206.43   0.215 ms    AS31898 - Oracle Corporation  Tokyo, Japan         
+ 2    61.200.80.62    8.46 ms     AS2914 - NTT America          Tokyo, Japan         
+ 3    61.200.80.61    1.146 ms    AS2914 - NTT America          Tokyo, Japan         
+ 4    129.250.6.47    1.319 ms    AS2914 - NTT America          United States        
+ 5    129.250.6.129   2.55 ms     AS2914 - NTT America          United States        
+ 6    129.250.2.59    2.96 ms     AS2914 - NTT America          United States        
+ 7    120.88.54.134   2.464 ms    AS2914 - NTT America          Tokyo, Japan         
+ 8    59.43.183.1     166.122 ms                                中国                 
+ *    *               *           *                             *                    
+ 10   59.43.130.217   158.229 ms                                中国                 
+ 11   59.43.138.186   185.811 ms                                中国                 
+ 12   110.80.128.94   72.512 ms   AS133775 - 中国电信           厦门市, 福建省, 中国 
+ *    *               *           *                             *                    
+ 14   117.25.141.110  73.303 ms   AS133775 - 中国电信           厦门市, 福建省, 中国 
+ 15   117.28.254.129  191.663 ms  AS4809 - 中国电信             厦门市, 福建省, 中国 
+----------------------------------------------------------------------
+重庆联通
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 113.207.25.138 &lt;
+ Hop  IP Address      Latency    ISP                           Location      
+ 1    140.91.206.42   0.184 ms   AS31898 - Oracle Corporation  Tokyo, Japan  
+ 2    61.200.80.62    1.151 ms   AS2914 - NTT America          Tokyo, Japan  
+ 3    61.200.80.61    1.065 ms   AS2914 - NTT America          Tokyo, Japan  
+ 4    129.250.6.45    1.417 ms   AS2914 - NTT America          United States 
+ 5    129.250.3.33    1.489 ms   AS2914 - NTT America          United States 
+ 6    219.158.32.29   74.14 ms   AS4837 - 中国联通             中国          
+ 7    219.158.3.29    60.796 ms  AS4837 - 中国联通             中国          
+ *    *               *          *                             *             
+ 9    219.158.12.74   92.995 ms  AS4837 - 中国联通             中国          
+ 10   113.207.25.138  99.892 ms  AS4837 - 中国联通             中国          
+----------------------------------------------------------------------
+成都联通
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 119.6.6.6 &lt;
+ Hop  IP Address     Latency     ISP                           Location             
+ 1    140.91.206.53  0.209 ms    AS31898 - Oracle Corporation  Tokyo, Japan         
+ 2    61.200.80.62   1.168 ms    AS2914 - NTT America          Tokyo, Japan         
+ 3    61.200.80.61   0.998 ms    AS2914 - NTT America          Tokyo, Japan         
+ 4    129.250.6.47   2.647 ms    AS2914 - NTT America          United States        
+ 5    129.250.3.56   1.631 ms    AS2914 - NTT America          United States        
+ 6    129.250.9.46   76.049 ms   None                          United States        
+ 7    219.158.9.214  86.206 ms   AS4837 - 中国联通             中国                 
+ *    *              *           *                             *                    
+ 10   119.6.197.194  88.321 ms   AS4837 - 中国联通             成都市, 四川省, 中国 
+ 11   119.6.195.38   140.969 ms  AS4837 - 中国联通             成都市, 四川省, 中国 
+ 12   119.6.6.6      87.077 ms   AS4837 - 中国联通             成都市, 四川省, 中国 
+----------------------------------------------------------------------
+上海移动
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 120.204.197.126 &lt;
+ Hop  IP Address       Latency     ISP                           Location             
+ 1    140.91.206.45    0.211 ms    AS31898 - Oracle Corporation  Tokyo, Japan         
+ 2    61.200.80.62     0.941 ms    AS2914 - NTT America          Tokyo, Japan         
+ 3    61.200.80.61     1.249 ms    AS2914 - NTT America          Tokyo, Japan         
+ 4    129.250.6.45     2.758 ms    AS2914 - NTT America          United States        
+ 5    129.250.2.51     59.257 ms   AS2914 - NTT America          United States        
+ 6    129.250.5.33     51.06 ms    AS2914 - NTT America          United States        
+ *    *                *           *                             *                    
+ 8    223.120.2.53     55.257 ms   None                          Hong Kong SAR        
+ 9    223.120.2.10     58.943 ms   AS58453 - 中国移动            广州市, 广东省, 中国 
+ 10   223.120.22.5     89.325 ms   AS58453 - 中国移动            中国                 
+ 11   221.183.55.30    87.313 ms   AS9808 - 中国移动             中国                 
+ 12   221.183.25.189   86.657 ms   AS9808 - 中国移动             福州市, 福建省, 中国 
+ 13   221.176.22.9     88.937 ms   AS9808 - 中国移动             中国                 
+ 14   111.24.3.89      88.002 ms   AS9808 - 中国移动             中国                 
+ *    *                *           *                             *                    
+ 16   117.185.10.130   85.338 ms   AS9808 - 中国移动             中国                 
+ 17   120.204.194.14   88.403 ms   AS9808 - 中国移动             中国                 
+ 18   120.204.197.126  108.677 ms  AS9808 - 中国移动             中国                 
+----------------------------------------------------------------------
+成都移动
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 183.221.253.100 &lt;
+ Hop  IP Address       Latency    ISP                           Location             
+ 1    140.91.206.54    0.209 ms   AS31898 - Oracle Corporation  Tokyo, Japan         
+ 2    61.200.80.62     0.962 ms   AS2914 - NTT America          Tokyo, Japan         
+ 3    61.200.80.61     1.133 ms   AS2914 - NTT America          Tokyo, Japan         
+ 4    129.250.6.45     1.059 ms   AS2914 - NTT America          United States        
+ 5    129.250.2.51     68.719 ms  AS2914 - NTT America          United States        
+ 6    129.250.5.33     53.917 ms  AS2914 - NTT America          United States        
+ *    *                *          *                             *                    
+ 8    223.120.2.53     56.554 ms  None                          Hong Kong SAR        
+ 9    223.120.2.2      60.485 ms  AS58453 - 中国移动            广州市, 广东省, 中国 
+ *    *                *          *                             *                    
+ 11   221.183.25.122   61.595 ms  AS9808 - 中国移动             广州市, 广东省, 中国 
+ 12   221.176.22.157   61.55 ms   AS9808 - 中国移动             广州市, 广东省, 中国 
+ 13   111.24.5.189     63.302 ms  AS9808 - 中国移动             中国                 
+ 14   111.24.2.145     95.664 ms  AS9808 - 中国移动             中国                 
+ 15   111.24.17.161    95.029 ms  AS9808 - 中国移动             中国                 
+ 16   221.176.21.202   95.599 ms  AS9808 - 中国移动             中国                 
+ *    *                *          *                             *                    
+ 18   183.221.253.100  95.714 ms  AS9808 - 中国移动             成都市, 四川省, 中国 
+----------------------------------------------------------------------
+成都教育网
+WorstTrace 2.0.7 Public Beta
+Join Our group at: https://t.me/WorstTrace
+
+&gt; Target: 202.112.14.151 &lt;
+ Hop  IP Address       Latency     ISP                           Location             
+ 1    140.91.206.52    0.205 ms    AS31898 - Oracle Corporation  Tokyo, Japan         
+ 2    203.190.230.187  1.299 ms    None                          Tokyo, Japan         
+ 3    203.190.230.108  54.637 ms   None                          Tokyo, Japan         
+ 4    223.118.3.97     50.903 ms   None                          Hong Kong SAR        
+ 5    223.119.81.94    51.606 ms   AS58453 - CMI-INT-HK          Hong Kong SAR        
+ 6    101.4.114.181    85.19 ms    AS4538 - 中国教育网           中国                 
+ *    *                *           *                             *                    
+ 8    101.4.118.213    85.8 ms     AS4538 - 中国教育网           中国                 
+ 9    101.4.112.14     99.99 ms    AS4538 - 中国教育网           西安市, 陕西省, 中国 
+ 10   101.4.112.18     111.107 ms  AS4538 - 中国教育网           成都市, 四川省, 中国 
+ 11   101.4.116.158    135.11 ms   AS4538 - 中国教育网           成都市, 四川省, 中国 
+ *    *                *           *                             *                    
+ 15   202.112.14.151   113.333 ms  AS24355 - 中国教育网          成都市, 四川省, 中国 
+----------------------------------------------------------------------<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="Oracle-SGP-ARM"><a href="#Oracle-SGP-ARM" class="headerlink" title="Oracle SGP ARM"></a>Oracle SGP ARM</h1><pre class="line-numbers language-none"><code class="language-none">武汉电信
+traceroute to 202.103.44.150 (202.103.44.150), 30 hops max, 32 byte packets
+ 1  140.91.232.3  0.20 ms  AS31898  Singapore, oracle.com
+ 2  180.87.105.34  6.45 ms  AS6453  Singapore, tatacommunications.com
+ 3  ix-be-7.ecore2.svq-singapore.as6453.net (180.87.105.33)  10.79 ms  AS6453  Singapore, tatacommunications.com
+ 4  if-be-10-2.ecore2.esin4-singapore.as6453.net (180.87.107.1)  171.24 ms  AS6453  Singapore, tatacommunications.com
+ 5  if-ae-45-2.tcore1.svw-singapore.as6453.net (180.87.108.5)  172.70 ms  AS6453  Singapore, tatacommunications.com
+ 6  if-ae-2-2.tcore2.svw-singapore.as6453.net (180.87.12.2)  169.23 ms  AS6453  Singapore, tatacommunications.com
+ 7  if-ae-28-2.tcore1.av3-toyohashi.as6453.net (180.87.3.128)  191.75 ms  AS6453  Japan, Aichi, Toyohashi, tatacommunications.com
+ 8  if-ae-2-2.tcore2.av3-toyohashi.as6453.net (180.87.3.131)  173.76 ms  AS6453  Japan, Aichi, Toyohashi, tatacommunications.com
+ 9  if-ae-28-3.tcore2.lvw-losangeles.as6453.net (180.87.28.139)  200.62 ms  AS6453  United States, California, Los Angeles, tatacommunications.com
+10  64.86.252.63  180.06 ms  AS6453  United States, California, Los Angeles, tatacommunications.com
+11  202.97.51.53  223.29 ms  AS4134  China, Shanghai, ChinaTelecom
+12  *
+13  *
+14  *
+15  58.53.184.78  242.83 ms  AS4134  China, Hubei, Wuhan, ChinaTelecom
+16  *
+17  *
+18  *
+19  *
+20  *
+21  *
+22  *
+23  *
+24  *
+25  *
+26  *
+27  *
+28  *
+29  *
+30  *
+
+----------------------------------------------------------------------
+广州电信
+traceroute to 14.215.116.1 (14.215.116.1), 30 hops max, 32 byte packets
+ 1  140.91.232.11  0.25 ms  AS31898  Singapore, oracle.com
+ 2  180.87.105.34  1.12 ms  AS6453  Singapore, tatacommunications.com
+ 3  ix-be-7.ecore2.svq-singapore.as6453.net (180.87.105.33)  1.47 ms  AS6453  Singapore, tatacommunications.com
+ 4  *
+ 5  if-ae-45-2.tcore1.svw-singapore.as6453.net (180.87.108.5)  172.71 ms  AS6453  Singapore, tatacommunications.com
+ 6  if-et-23-6.hcore2.kv8-chiba.as6453.net (180.87.12.74)  84.20 ms  AS6453  Japan, Chiba, tatacommunications.com
+ 7  if-ae-53-6.tcore2.lvw-losangeles.as6453.net (64.86.252.60)  179.28 ms  AS6453  United States, California, Los Angeles, tatacommunications.com
+ 8  64.86.252.63  185.79 ms  AS6453  United States, California, Los Angeles, tatacommunications.com
+ 9  202.97.72.101  236.64 ms  AS4134  China, Guangdong, Guangzhou, ChinaTelecom
+10  202.97.94.113  246.72 ms  AS4134  China, Guangdong, Guangzhou, ChinaTelecom
+11  202.97.82.65  245.14 ms  AS4134  China, Guangdong, Guangzhou, ChinaTelecom
+12  *
+13  183.2.145.202  244.26 ms  AS4134  China, Guangdong, Guangzhou, ChinaTelecom
+14  183.56.129.10  243.46 ms  AS4134  China, Guangdong, Guangzhou, ChinaTelecom
+15  14.215.116.1  245.63 ms  AS4134  China, Guangdong, Guangzhou, ChinaTelecom
+
+----------------------------------------------------------------------
+上海电信
+traceroute to 101.95.120.109 (101.95.120.109), 30 hops max, 32 byte packets
+ 1  140.91.232.3  0.32 ms  AS31898  Singapore, oracle.com
+ 2  180.87.105.34  34.25 ms  AS6453  Singapore, tatacommunications.com
+ 3  ix-be-7.ecore2.svq-singapore.as6453.net (180.87.105.33)  1.60 ms  AS6453  Singapore, tatacommunications.com
+ 4  *
+ 5  if-ae-45-2.tcore1.svw-singapore.as6453.net (180.87.108.5)  179.79 ms  AS6453  Singapore, tatacommunications.com
+ 6  if-et-23-5.hcore2.kv8-chiba.as6453.net (116.0.74.12)  77.91 ms  AS6453  Japan, Chiba, tatacommunications.com
+ 7  if-et-1-2.hcore1.kv8-chiba.as6453.net (120.29.211.2)  72.36 ms  AS6453  Japan, Chiba, tatacommunications.com
+ 8  if-ae-5-2.tcore2.sv1-santaclara.as6453.net (209.58.86.142)  175.53 ms  AS6453  United States, California, Santa Clara, tatacommunications.com
+ 9  if-ae-18-2.tcore1.sqn-sanjose.as6453.net (63.243.205.72)  182.98 ms  AS6453  United States, California, San Jose, tatacommunications.com
+10  if-ae-1-2.tcore2.sqn-sanjose.as6453.net (63.243.205.2)  176.62 ms  AS6453  United States, California, San Jose, tatacommunications.com
+11  218.30.54.244  175.09 ms  AS4134  United States, California, San Jose, ChinaTelecom
+12  *
+13  202.97.51.162  231.27 ms  AS4134  China, Shanghai, ChinaTelecom
+14  202.97.24.153  232.43 ms  AS4134  China, Shanghai, ChinaTelecom
+15  *
+16  *
+17  *
+18  *
+19  *
+20  *
+21  *
+22  *
+23  *
+24  *
+25  *
+26  *
+27  *
+28  *
+29  *
+30  *
+
+----------------------------------------------------------------------
+厦门电信
+traceroute to 117.28.254.129 (117.28.254.129), 30 hops max, 32 byte packets
+ 1  140.91.232.13  0.44 ms  AS31898  Singapore, oracle.com
+ 2  116.51.18.146  1.15 ms  AS2914  Singapore, ntt.com
+ 3  ae-40.r00.sngpsi07.sg.bb.gin.ntt.net (116.51.18.145)  1.88 ms  AS2914  Singapore, ntt.com
+ 4  ae-3.r22.sngpsi07.sg.bb.gin.ntt.net (129.250.2.96)  1.76 ms  AS2914  Singapore, ntt.com
+ 5  ae-10.r27.tkokhk01.hk.bb.gin.ntt.net (129.250.7.67)  36.40 ms  AS2914  China, Hong Kong, ntt.com
+ 6  ae-1.a01.chwahk02.hk.bb.gin.ntt.net (129.250.5.161)  43.14 ms  AS2914  China, Hong Kong, ntt.com
+ 7  xe-0-0-21-2.a01.chwahk02.hk.ce.gin.ntt.net (203.131.241.70)  38.13 ms  AS2914  China, Hong Kong, ntt.com
+ 8  59.43.188.125  183.50 ms  *  China, Guangdong, Guangzhou, ChinaTelecom
+ 9  *
+10  59.43.130.153  187.88 ms  *  China, Guangdong, Guangzhou, ChinaTelecom
+11  59.43.46.214  202.02 ms  *  China, Fujian, ChinaTelecom
+12  *
+13  27.148.195.98  94.09 ms  AS133775  China, Fujian, Xiamen, ChinaTelecom
+14  117.25.141.110  90.53 ms  AS133775  China, Fujian, Xiamen, ChinaTelecom
+15  117.28.254.129  199.88 ms  AS4809  China, Fujian, Xiamen, ChinaTelecom
+
+----------------------------------------------------------------------
+重庆联通
+traceroute to 113.207.25.138 (113.207.25.138), 30 hops max, 32 byte packets
+ 1  140.91.232.5  0.39 ms  AS31898  Singapore, oracle.com
+ 2  180.87.105.34  0.89 ms  AS6453  Singapore, tatacommunications.com
+ 3  ix-be-7.ecore2.svq-singapore.as6453.net (180.87.105.33)  1.55 ms  AS6453  Singapore, tatacommunications.com
+ 4  if-be-10-2.ecore2.esin4-singapore.as6453.net (180.87.107.1)  35.58 ms  AS6453  Singapore, tatacommunications.com
+ 5  if-be-49-2.ecore1.esin4-singapore.as6453.net (180.87.108.3)  32.88 ms  AS6453  Singapore, tatacommunications.com
+ 6  if-ae-19-2.tcore2.svw-singapore.as6453.net (180.87.15.112)  36.11 ms  AS6453  Singapore, tatacommunications.com
+ 7  if-ae-32-6.tcore2.hk2-hongkong.as6453.net (116.0.93.152)  30.87 ms  AS6453  China, Hong Kong, tatacommunications.com
+ 8  if-ae-2-2.thar1.hk2-hongkong.as6453.net (116.0.82.62)  30.51 ms  AS6453  China, Hong Kong, tatacommunications.com
+ 9  116.0.82.25  34.96 ms  AS6453  China, Hong Kong, tatacommunications.com
+10  43.252.86.65  41.83 ms  AS10099  China, Hong Kong, ChinaUnicom
+11  43.252.86.129  85.44 ms  AS10099  China, Hong Kong, ChinaUnicom
+12  219.158.20.97  88.04 ms  AS4837  China, Hong Kong, ChinaUnicom
+13  219.158.24.133  83.15 ms  AS4837  China, Guangdong, Guangzhou, ChinaUnicom
+14  219.158.8.113  96.68 ms  AS4837  China, Guangdong, Guangzhou, ChinaUnicom
+15  219.158.99.210  144.89 ms  AS4837  China, Zhejiang, Hangzhou, ChinaUnicom
+16  113.207.25.138  118.24 ms  AS4837  China, Chongqing, ChinaUnicom
+
+----------------------------------------------------------------------
+成都联通
+traceroute to 119.6.6.6 (119.6.6.6), 30 hops max, 32 byte packets
+ 1  140.91.232.12  0.20 ms  AS31898  Singapore, oracle.com
+ 2  180.87.105.34  0.95 ms  AS6453  Singapore, tatacommunications.com
+ 3  ix-be-7.ecore2.svq-singapore.as6453.net (180.87.105.33)  1.34 ms  AS6453  Singapore, tatacommunications.com
+ 4  *
+ 5  if-ae-45-2.tcore1.svw-singapore.as6453.net (180.87.108.5)  35.55 ms  AS6453  Singapore, tatacommunications.com
+ 6  if-ae-2-2.tcore2.svw-singapore.as6453.net (180.87.12.2)  34.11 ms  AS6453  Singapore, tatacommunications.com
+ 7  if-ae-32-4.tcore2.hk2-hongkong.as6453.net (116.0.93.168)  39.21 ms  AS6453  China, Hong Kong, tatacommunications.com
+ 8  if-ae-2-2.thar1.hk2-hongkong.as6453.net (116.0.82.62)  31.03 ms  AS6453  China, Hong Kong, tatacommunications.com
+ 9  116.0.82.25  36.49 ms  AS6453  China, Hong Kong, tatacommunications.com
+10  43.252.86.65  42.23 ms  AS10099  China, Hong Kong, ChinaUnicom
+11  43.252.86.129  83.52 ms  AS10099  China, Hong Kong, ChinaUnicom
+12  219.158.10.53  177.68 ms  AS4837  China, Guangdong, Guangzhou, ChinaUnicom
+13  219.158.98.93  185.49 ms  AS4837  China, Guangdong, Guangzhou, ChinaUnicom
+14  *
+15  219.158.102.186  125.57 ms  AS4837  China, Sichuan, Chengdu, ChinaUnicom
+16  119.6.197.202  229.24 ms  AS4837  China, Sichuan, Chengdu, ChinaUnicom
+17  119.6.195.34  141.93 ms  AS4837  China, Sichuan, Chengdu, ChinaUnicom
+18  119.6.6.6  129.54 ms  AS4837  China, Sichuan, Chengdu, ChinaUnicom
+
+----------------------------------------------------------------------
+上海移动
+traceroute to 120.204.197.126 (120.204.197.126), 30 hops max, 32 byte packets
+ 1  140.91.232.14  0.15 ms  AS31898  Singapore, oracle.com
+ 2  116.51.18.146  0.99 ms  AS2914  Singapore, ntt.com
+ 3  ae-40.r00.sngpsi07.sg.bb.gin.ntt.net (116.51.18.145)  1.48 ms  AS2914  Singapore, ntt.com
+ 4  ae-3.r22.sngpsi07.sg.bb.gin.ntt.net (129.250.2.96)  1.81 ms  AS2914  Singapore, ntt.com
+ 5  ae-10.r27.tkokhk01.hk.bb.gin.ntt.net (129.250.7.67)  36.21 ms  AS2914  China, Hong Kong, ntt.com
+ 6  ae-1.a02.tkokhk01.hk.bb.gin.ntt.net (129.250.5.39)  38.74 ms  AS2914  China, Hong Kong, ntt.com
+ 7  *
+ 8  223.120.2.53  39.48 ms  AS58453  China, Hong Kong, ChinaMobile
+ 9  223.120.2.6  44.20 ms  AS58453  China, Guangdong, Guangzhou, ChinaMobile
+10  223.120.22.5  93.06 ms  AS58453  China, Shanghai, ChinaMobile
+11  221.183.55.34  73.72 ms  AS9808  China, Shanghai, ChinaMobile
+12  221.183.25.193  77.18 ms  AS9808  China, Shanghai, ChinaMobile
+13  221.176.22.33  83.61 ms  AS9808  China, Shanghai, ChinaMobile
+14  111.24.4.77  71.27 ms  AS9808  China, Shanghai, ChinaMobile
+15  *
+16  *
+17  120.204.194.14  73.37 ms  AS9808  China, Shanghai, ChinaMobile
+18  120.204.197.126  70.79 ms  AS9808  China, Shanghai, ChinaMobile
+
+----------------------------------------------------------------------
+成都移动
+traceroute to 183.221.253.100 (183.221.253.100), 30 hops max, 32 byte packets
+ 1  140.91.232.13  0.19 ms  AS31898  Singapore, oracle.com
+ 2  116.51.18.146  1.18 ms  AS2914  Singapore, ntt.com
+ 3  ae-40.r00.sngpsi07.sg.bb.gin.ntt.net (116.51.18.145)  1.59 ms  AS2914  Singapore, ntt.com
+ 4  ae-3.r22.sngpsi07.sg.bb.gin.ntt.net (129.250.2.96)  1.94 ms  http: 403  http: 403
+ 5  ae-10.r27.tkokhk01.hk.bb.gin.ntt.net (129.250.7.67)  36.17 ms  http: 403  http: 403
+ 6  ae-1.a02.tkokhk01.hk.bb.gin.ntt.net (129.250.5.39)  36.55 ms  http: 403  http: 403
+ 7  *
+ 8  223.120.2.53  38.79 ms  http: 403  http: 403
+ 9  223.120.2.14  44.17 ms  http: 403  http: 403
+10  *
+11  221.183.52.85  51.16 ms  http: 403  http: 403
+12  *
+13  *
+14  111.24.2.145  99.86 ms  http: 403  http: 403
+15  111.24.2.246  95.13 ms  http: 403  http: 403
+16  221.176.21.202  96.92 ms  http: 403  http: 403
+17  *
+18  183.221.253.100  94.56 ms  http: 403  http: 403
+
+----------------------------------------------------------------------
+成都教育网
+traceroute to 202.112.14.151 (202.112.14.151), 30 hops max, 32 byte packets
+ 1  140.91.232.4  0.40 ms  http: 403  http: 403
+ 2  31898.sgw.equinix.com (27.111.229.44)  0.97 ms  http: 403  http: 403
+ 3  58453.sgw.equinix.com (27.111.228.228)  2.03 ms  http: 403  http: 403
+ 4  223.120.2.105  37.76 ms  http: 403  http: 403
+ 5  223.120.3.86  36.68 ms  http: 403  http: 403
+ 6  223.119.81.94  35.90 ms  http: 403  http: 403
+ 7  101.4.114.181  70.14 ms  http: 403  http: 403
+ 8  *
+ 9  101.4.118.213  70.74 ms  http: 403  http: 403
+10  101.4.112.14  86.72 ms  http: 403  http: 403
+11  101.4.112.18  97.97 ms  http: 403  http: 403
+12  101.4.116.158  98.90 ms  http: 403  http: 403
+13  *
+14  *
+15  *
+16  *
+17  202.112.14.151  98.12 ms  http: 403  http: 403
+
+----------------------------------------------------------------------
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%9D%82/">
+                                    <span class="chip bg-color">杂</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%BA%BF%E8%B7%AF/">
+                                    <span class="chip bg-color">线路</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/03/09/2022-03-09-tg-wen-jian-zhuan-cun-gd/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="tg文件转存gd">
+                        
+                        <span class="card-title">tg文件转存gd</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-09
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            xieshang
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Google-Drive/">
+                        <span class="chip bg-color">Google Drive</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%99%E7%A8%8B/">
+                        <span class="chip bg-color">教程</span>
+                    </a>
+                    
+                    <a href="/tags/Telegram/">
+                        <span class="chip bg-color">Telegram</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/03/09/2022-02-20-onedrive-yu-google-drive-yi-ji-cloudflare-workers-de-xian-zhi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="记录OD与GD以及CF Workers的限制">
+                        
+                        <span class="card-title">记录OD与GD以及CF Workers的限制</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            xieshang
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/OneDrive/">
+                        <span class="chip bg-color">OneDrive</span>
+                    </a>
+                    
+                    <a href="/tags/Google-Drive/">
+                        <span class="chip bg-color">Google Drive</span>
+                    </a>
+                    
+                    <a href="/tags/Cloudflare/">
+                        <span class="chip bg-color">Cloudflare</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%99%90%E5%88%B6/">
+                        <span class="chip bg-color">限制</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('300')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: tea1me的博客<br />'
+            + '文章作者: tea1me<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + 'Ctrl+C 和 Ctrl+V 只是一种手段，不要过于依赖他们两个啦。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022</span>
+            
+            <a href="/about" target="_blank">tea1me</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Tealme" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:admin@xieshang.org" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1127871589" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1127871589" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+<script type="text/javascript">
+    var OriginTitile = document.title,
+        st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ? (document.title = "页面正在沉睡中~~~", clearTimeout(st)) : (document.title =
+            "页面唤醒了！", st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+
+</body>
+
+</html>

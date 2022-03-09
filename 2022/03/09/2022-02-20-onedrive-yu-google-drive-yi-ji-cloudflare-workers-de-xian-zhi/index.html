@@ -4,11 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="记录一些信息学的情话, tea1me的博客">
-    <meta name="description" content="没有对象可以自己new一个
-HacKer技术学的再好, 却无法入侵你的心;服务器入侵的再多, 对你只有GUEST;是我的DDOS照成了你的拒绝服务, 还是我的byshell再次被你查杀？
-你的bug，我来de。
-">
+    <meta name="keywords" content="记录OD与GD以及CF Workers的限制, tea1me的博客">
+    <meta name="description" content="Google Drive(转自BlueSkyxn):空间数据上限一般到达限额后24H恢复单帐号下载：10TB/天单帐号上传：750GB/天浏览次数：50000 次/天同时打开次数：900 次/分钟个人盘日转出2TB/天团队盘日转出20TB-">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -31,7 +28,7 @@ HacKer技术学的再好, 却无法入侵你的心;服务器入侵的再多, 对
 </script>
 
 
-    <title>记录一些信息学的情话 | tea1me的博客</title>
+    <title>记录OD与GD以及CF Workers的限制 | tea1me的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -275,12 +272,12 @@ HacKer技术学的再好, 却无法入侵你的心;服务器入侵的再多, 对
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">记录一些信息学的情话</h1>
+                    <h1 class="description center-align post-title">记录OD与GD以及CF Workers的限制</h1>
                 </div>
             </div>
         </div>
@@ -396,12 +393,20 @@ HacKer技术学的再好, 却无法入侵你的心;服务器入侵的再多, 对
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E4%BF%A1%E6%81%AF%E5%AD%A6/">
-                                <span class="chip bg-color">信息学</span>
+                            <a href="/tags/OneDrive/">
+                                <span class="chip bg-color">OneDrive</span>
                             </a>
                         
-                            <a href="/tags/%E6%83%85%E8%AF%9D/">
-                                <span class="chip bg-color">情话</span>
+                            <a href="/tags/Google-Drive/">
+                                <span class="chip bg-color">Google Drive</span>
+                            </a>
+                        
+                            <a href="/tags/Cloudflare/">
+                                <span class="chip bg-color">Cloudflare</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%99%90%E5%88%B6/">
+                                <span class="chip bg-color">限制</span>
                             </a>
                         
                     </div>
@@ -416,21 +421,21 @@ HacKer技术学的再好, 却无法入侵你的心;服务器入侵的再多, 对
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-01-09
+                    2022-03-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-09
+                    2022-03-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    69
+                    968
                 </div>
                 
 
@@ -450,9 +455,34 @@ HacKer技术学的再好, 却无法入侵你的心;服务器入侵的再多, 对
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><del>没有对象可以自己new一个</del></p>
-<p><strong>HacKer</strong>技术学的再好, 却无法入侵你的<strong>心</strong>;服务器入侵的再多, 对你只有GUEST;是我的DDOS照成了你的拒绝服务, 还是我的byshell再次被你查杀？</p>
-<p>你的<code>bug</code>，我来<code>de</code>。</p>
+                <h1 id="Google-Drive-转自BlueSkyxn"><a href="#Google-Drive-转自BlueSkyxn" class="headerlink" title="Google Drive(转自BlueSkyxn):"></a>Google Drive(转自BlueSkyxn):</h1><h2 id="空间数据上限"><a href="#空间数据上限" class="headerlink" title="空间数据上限"></a>空间数据上限</h2><p>一般到达限额后24H恢复<br>单帐号下载：10TB/天<br>单帐号上传：750GB/天<br>浏览次数：50000 次/天<br>同时打开次数：900 次/分钟<br>个人盘日转出2TB/天<br>团队盘日转出20TB-40TB/天<br>单文件大小：5TB/文件   </p>
+<h2 id="成员数上限"><a href="#成员数上限" class="headerlink" title="成员数上限"></a>成员数上限</h2><table>
+<thead>
+<tr>
+<th>成员数</th>
+<th>每个共享云端硬盘的成员数上限</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>群组</td>
+<td>100</td>
+</tr>
+<tr>
+<td>用户和群组合计*</td>
+<td>600</td>
+</tr>
+<tr>
+<td>个人总数(用户和群组成员)</td>
+<td>50000</td>
+</tr>
+</tbody></table>
+<h2 id="其他限制"><a href="#其他限制" class="headerlink" title="其他限制"></a>其他限制</h2><p>一个共享云端硬盘最多可包含 40 万个文件和文件夹<br>共享云端硬盘中的文件夹可支持最多 20 级嵌套的文件夹<br>Google 云端硬盘的导航列表中最多可显示 1000 个共享云端硬盘。不过，您仍然可以使用直接网址访问其他共享云端硬盘。<br>使用虚拟云端硬盘时，您无法将文件夹从“我的云端硬盘”移动到共享云端硬盘【个人盘to团队盘】   </p>
+<h1 id="OneDrive-仅供参考-真实性未知"><a href="#OneDrive-仅供参考-真实性未知" class="headerlink" title="OneDrive(仅供参考,真实性未知)"></a>OneDrive(仅供参考,真实性未知)</h1><h2 id="速率和下载"><a href="#速率和下载" class="headerlink" title="速率和下载"></a>速率和下载</h2><p>一种情况，单账号稳定1Gbps传输速度内，2TB后就会限速；另一种情况，如果超速，1TB左右就会限制。<br>根据经验，50-70MB/s的速度可以持续跑到2TB。无论多慢的平均速度，大概都存在2TB左右的额度触发。<br>单api有线程限制，推荐不要超过16线程，超过会容易提前触发限制。<br>单账号下申请多个私有api也有一个共享的额度和线程限制，长期大量拷贝不推荐单账号下申请多个独立api，而是推荐域内每一个账号申请对应1个api即可。<br>总域仍然有总线程数和平均速度以及额度限制，所有账号对应的api，总线程不推荐超过40线程，32-36线程比较稳定可以持续跑，但是注意依然有总额度10TB左右额度限制触发。   </p>
+<h2 id="OneDrive云端服务器限制"><a href="#OneDrive云端服务器限制" class="headerlink" title="OneDrive云端服务器限制"></a>OneDrive云端服务器限制</h2><p>微软的服务器有物理限速瓶颈，总带宽大约是3Gbps-4Gbps左右，如果你的带宽超过此国际带宽总额，似乎没有很好的办法提升。<br>微软的存储架构存在吞吐量的不足，长时间大量拷贝，大约200tb左右会频繁触发service unavailable 错误，导致文件无法成功传输，推测可能是硬盘io问题，或者数据库结构瓶颈，请等待机房为你个人增加硬盘，系统恢复后再拷贝。   </p>
+<h2 id="限制策略"><a href="#限制策略" class="headerlink" title="限制策略"></a>限制策略</h2><p>微软的限速策略是动态智能限制，处于触发状态后，如果进行类似高负荷操作，很快就会被再次限制。<br>即使隔个几天再进行高负荷行为，也会很快被限制。<br>限制后会显示”<strong>您请求的页面暂时不可用。对由此给您造成的不便，我们深表歉意，请几分钟后再返回查看。</strong>“或者”<strong>429 Too many requests.</strong>“”<br>限制范围：同域的所有OneDrive。<br>SharePoint不受影响。   </p>
+<h2 id="限制解除"><a href="#限制解除" class="headerlink" title="限制解除"></a>限制解除</h2><p>大概就是访问量少了后，自动解除。具体可能十几分钟，也可能几个小时。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>分享，应该遵循“多域多样化”的原则，这样既可以降低全局的负担，达到分流效果。同时，也能减少分享链接所在全局OneDrive被限制的概率。</p>
+<h1 id="CloudFlare-Workers"><a href="#CloudFlare-Workers" class="headerlink" title="CloudFlare Workers"></a>CloudFlare Workers</h1><h2 id="请求数"><a href="#请求数" class="headerlink" title="请求数"></a>请求数</h2><p>免费版每天有 10 万次免费请求，并且有每分钟1000次请求的限制，每个请求最多占用 10 毫秒 CPU 时间。超过限制后，会返回错误。<br>每月 5刀 的高级版本，每月可用 1000 万次请求（超出部分 $0.5/百万次请求），每个请求最多占用 50 毫秒 CPU 时间。</p>
 
                 
             </div>
@@ -467,12 +497,20 @@ HacKer技术学的再好, 却无法入侵你的心;服务器入侵的再多, 对
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E4%BF%A1%E6%81%AF%E5%AD%A6/">
-                                    <span class="chip bg-color">信息学</span>
+                                <a href="/tags/OneDrive/">
+                                    <span class="chip bg-color">OneDrive</span>
                                 </a>
                             
-                                <a href="/tags/%E6%83%85%E8%AF%9D/">
-                                    <span class="chip bg-color">情话</span>
+                                <a href="/tags/Google-Drive/">
+                                    <span class="chip bg-color">Google Drive</span>
+                                </a>
+                            
+                                <a href="/tags/Cloudflare/">
+                                    <span class="chip bg-color">Cloudflare</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%99%90%E5%88%B6/">
+                                    <span class="chip bg-color">限制</span>
                                 </a>
                             
                         </div>
@@ -524,13 +562,13 @@ HacKer技术学的再好, 却无法入侵你的心;服务器入侵的再多, 对
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/01/08/2020icpc-shang-hai-zhan/">
+                <a href="/2022/03/09/2022-02-27-shou-shang-ji-qi-de-hui-cheng-xian-lu-ji-lu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="2020ICPC上海站">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="手上机器的回程线路记录">
                         
-                        <span class="card-title">2020ICPC上海站</span>
+                        <span class="card-title">手上机器的回程线路记录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -541,7 +579,7 @@ HacKer技术学的再好, 却无法入侵你的心;服务器入侵的再多, 对
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-09
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-09
                         </span>
                         <span class="publish-author">
                             
@@ -554,20 +592,12 @@ HacKer技术学的再好, 却无法入侵你的心;服务器入侵的再多, 对
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/XCPC/">
-                        <span class="chip bg-color">XCPC</span>
+                    <a href="/tags/%E6%9D%82/">
+                        <span class="chip bg-color">杂</span>
                     </a>
                     
-                    <a href="/tags/ICPC/">
-                        <span class="chip bg-color">ICPC</span>
-                    </a>
-                    
-                    <a href="/tags/2020/">
-                        <span class="chip bg-color">2020</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%BF%A1%E6%81%AF%E5%AD%A6/">
-                        <span class="chip bg-color">信息学</span>
+                    <a href="/tags/%E7%BA%BF%E8%B7%AF/">
+                        <span class="chip bg-color">线路</span>
                     </a>
                     
                 </div>
@@ -581,13 +611,13 @@ HacKer技术学的再好, 却无法入侵你的心;服务器入侵的再多, 对
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/01/08/du-zheng-xing-yi-chu-you-gan/">
+                <a href="/2022/03/09/2022-02-22-snapdrop-docker-da-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="整型溢出读后感">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="SnapDrop Docker搭建">
                         
-                        <span class="card-title">整型溢出读后感</span>
+                        <span class="card-title">SnapDrop Docker搭建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -598,7 +628,7 @@ HacKer技术学的再好, 却无法入侵你的心;服务器入侵的再多, 对
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-09
                             </span>
                         <span class="publish-author">
                             
@@ -611,12 +641,16 @@ HacKer技术学的再好, 却无法入侵你的心;服务器入侵的再多, 对
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%BF%A1%E6%81%AF%E5%AD%A6/">
-                        <span class="chip bg-color">信息学</span>
+                    <a href="/tags/SnapDrop/">
+                        <span class="chip bg-color">SnapDrop</span>
                     </a>
                     
-                    <a href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/">
-                        <span class="chip bg-color">读后感</span>
+                    <a href="/tags/Docker/">
+                        <span class="chip bg-color">Docker</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%99%E7%A8%8B/">
+                        <span class="chip bg-color">教程</span>
                     </a>
                     
                 </div>
